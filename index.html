@@ -1,201 +1,560 @@
 <!DOCTYPE html>
-<!--
-    Plain-Academic by Vasilios Mavroudis
-    Released under the Simplified BSD License/FreeBSD (2-clause) License.
-    https://github.com/mavroudisv/plain-academic
--->
-
 <html lang="en">
 <head>
-  <title>Jingwei Ni</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-  <link href='https://fonts.googleapis.com/css?family=Oswald:700' rel='stylesheet' type='text/css'>
+  <meta name="description" content="Jingwei Ni is a PhD student in NLP at ETH Zurich and the University of Zurich working on trustworthy AI: mining uncertainty from large language models and exposing it for human supervision, with applications in climate and legal NLP.">
+  <title>Jingwei Ni | Trustworthy AI Research</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+  <a class="skip-link" href="#main">Skip to content</a>
 
+  <header class="site-header" id="home">
+    <nav class="nav-shell" aria-label="Primary navigation">
+      <a class="brand-mark" href="#home" aria-label="Jingwei Ni homepage">
+        <span>JN</span>
+      </a>
+      <div class="nav-links">
+        <a href="#research">Research</a>
+        <a href="#events">Projects</a>
+        <a href="#publications">Publications</a>
+        <a href="#education">Education</a>
+        <a href="Ni_Jingwei_s_CV.pdf">CV</a>
+      </div>
+    </nav>
+  </header>
 
-<!-- Navigation -->
-	<nav class="navbar navbar-inverse navbar-static-top" role="navigation">
-	  <div class="container">
-		<div class="navbar-header">
-		  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-						<span class="sr-only">Toggle navigation</span>
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-					</button>
-		</div>
+  <main id="main">
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <p class="readout hero-readout">
+            <span>Trustworthy AI · NLP</span>
+            <span aria-hidden="true" class="readout-div">/</span>
+            <span>ETH Zürich × University of Zürich</span>
+          </p>
+          <h1>AI systems that know <span class="h1-accent">when to be trusted.</span></h1>
+          <p class="hero-lede">
+            I am a PhD student mining the uncertainty hidden inside large language models and exposing it for human supervision — with applications in climate and legal NLP.
+          </p>
 
-		<!-- Collect the nav links, forms, and other content for toggling -->
-		<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-		  <ul class="nav navbar-nav">
-				  <li><a href="https://edisonni-hku.github.io/index.html">Home</a></li>
-			  	  <li><a href="https://edisonni-hku.github.io/#events">Events</a></li>
-				  <li><a href="https://edisonni-hku.github.io/#publications">Publications</a></li>
-          <li><a href="https://edisonni-hku.github.io/#education">Education</a></li> 
-				  <li><a href="https://edisonni-hku.github.io/Ni_Jingwei_s_CV.pdf">CV</a></li>
-		  </ul>
-		</div>
-	  </div>
-	</nav>
-  
-  <!-- Page Content -->
-    <div class="container">
-
-        <div class="row">
-
-            <!-- Entries Column -->
-            <div class="col-md-8">
-                
-                <!-- Main Image -->
-                <img class="img-responsive" src="photo.jpg"  width="300" height="auto" alt=""><br>
-                
-                <div style="margin-top:3%; text-align:justify;"> 
-          <p>
-  I am a dedicated AI researcher passionate about building trustworthy AI systems that can make the future better. 
-  I am currently pursuing my PhD (2023–2027, expected) under the joint supervision of 
-  <a href="https://elliottash.com/">Prof. Elliott Ash</a> and 
-  <a href="http://www.mrinmaya.io/">Prof. Mrinmaya Sachan</a> at 
-  <a href="https://ethz.ch/en.html">ETH Zurich</a>, and 
-  <a href="https://www.bf.uzh.ch/en/persons/leippold-markus">Prof. Markus Leippold</a> at 
-  <a href="https://www.uzh.ch/en.html">University of Zurich</a>. 
-  I divide my time equally between both institutions.
-</p>
-
-<p>
-  My research centers on <b>AI application trustworthiness</b>, with a focus on two complementary directions:
-</p>
-
-<ul>
-  <li>
-    <b>External Monitoring</b> – Developing efficient external verifiers to validate AI reasoning and outputs, 
-    and improving AI application design (e.g., output formats, user interfaces, and visualizations) 
-    to facilitate human and machine oversight.
-  </li>
-  <li>
-    <b>Internal or Self-Monitoring</b> – Enabling AI systems to recognize when they may be correct or mistaken. 
-    This includes fine-tuning models to acknowledge their knowledge limits and express uncertainty, 
-    as well as designing uncertainty quantification methods that capture LLM uncertainty without 
-    interrupting generation.
-  </li>
-</ul>
-
-<p>
-  By advancing these directions, I aim to strengthen the reliability of AI in high-impact areas such as 
-  <b>NLP for climate change</b> and <b>Legal NLP</b>. 
-  I like to aim high while keeping my feet firmly on the ground.
-</p>
-
-<p>
-  If you are interested in collaborating, feel free to <a href="mailto:jingni@ethz.ch">reach out</a>!
-</p>
-
-            </div> 
-</div> 
-            <!-- Contact Info on the Sidebar -->
-            <div class="col-md-4">
-                <div style="font-family: 'Oswald', sans-serif; font-size: 32px;"><b>Jingwei Ni</b></div><br>
-                <p><b>PhD Student in NLP</b><br>
-				  <p><b>Work Email: <a href="jingni@ethz.ch">jingni@ethz.ch</a></b><br>
-                  <p><b>Personal Email: <a href="jingweini8@gmail.com">jingweini8@gmail.com</a></b><br>
-                ETH Zürich<br>
-                IFW-E-44, Haldeneggsteig 4<br>
-                </p>
+          <figure class="gauge" role="img" aria-label="Calibration gauge: a model's reported confidence aligned against verified correctness, resting in the calibrated range rather than at full certainty.">
+            <figcaption class="gauge-head">
+              <span class="gauge-label">Calibration</span>
+              <span class="gauge-readout">confidence ≈ correctness</span>
+            </figcaption>
+            <div class="gauge-track">
+              <span class="gauge-ticks" aria-hidden="true"></span>
+              <span class="gauge-fill" aria-hidden="true"></span>
+              <span class="gauge-needle" aria-hidden="true"></span>
             </div>
-            
-            
-            <!-- Links on the Sidebar -->
-            <div class="col-md-4" style="margin-top:2%">
-              <dd><a href="https://scholar.google.com/citations?hl=en&user=y7A_izwAAAAJ">Google Scholar</a></dd> 
-              <dd><a href="https://twitter.com/NJingwei">Twitter</a></dd>
-              <dd><a href="https://www.linkedin.com/in/jingwei-ni-8a9293152">LinkedIn</a></dd>
+            <div class="gauge-scale" aria-hidden="true">
+              <span>0.0</span>
+              <span>uncertain</span>
+              <span>1.0</span>
             </div>
-            
-            <!-- Events -->
-	    <div class="col-md-8">    
-                <h2 id="events">Projects and Community Services</h2>
-		<ul>
-		<li class="paper">Contributing to the trust-worthiness post-training of project Apertus. <a href="https://arxiv.org/abs/2509.14233">Technical Report</a></li>
-		<li class="paper">Organizing the second ClimateNLP workshop at ACL2025, Vienna. See <a href="https://aclanthology.org/2025.climatenlp-1.0/">Proceedings</a> and <a href="https://nlp4climate.github.io/">Workshop Website</a>.</li>
-		<li class="paper">Organized the first ClimateNLP workshop at ACL2024, Bangkok. See <a href="https://aclanthology.org/volumes/2024.climatenlp-1/">Proceedings</a> and <a href="https://nlp4climate.github.io/climatenlp2024/">Workshop Website</a>.</li>
-		</ul>
-	    </div>
+          </figure>
 
-		
-            <!-- Publications -->
-            <div class="col-md-8">    
-                <h2 id="publications">Publications</h2>
-
-                <h3>Selected Research</h3>
-                <p><strong>Self-Monitoring</strong></p>
-                <ul>
-                    <li class="paper">Jingwei Ni et al. (2025). <a href="https://arxiv.org/abs/2511.06209">Efficient Test-Time Scaling of Multi-Step Reasoning by Probing Internal States of Large Language Models</a>. <b>(ACL 2026 Long)</b></li>
-                    <li class="paper">Jingwei Ni et al. (2025). <a href="https://arxiv.org/abs/2506.19467">Can Reasoning Help Large Language Models Capture Human Annotator Disagreement?</a>. <b>(EACL 2026 Oral)</b></li>
-                    <li class="paper">Jingwei Ni et al. (2025). <a href="https://arxiv.org/abs/2406.14162">DIRAS: Efficient LLM Annotation of Document Relevance for Retrieval Augmented Generation</a>. <b>(NAACL 2025 Long)</b></li>
-                    <li class="paper">Jingwei Ni et al. (2024). <a href="https://arxiv.org/abs/2402.11073">AFaCTA: Assisting the Annotation of Factual Claim Detection with Reliable LLM Annotators</a>. <b>(ACL 2024 Long)</b></li>
-                </ul>
-
-                <h3>Full Publication List</h3>
-                <ul>
-
-		<li class="paper"><a href="https://arxiv.org/abs/2603.25158">Trace2Skill: Distill Trajectory-Local Lessons into Transferable Agent Skills</a> Jingwei Ni et al.</li>
-		<li class="paper"><a href="https://arxiv.org/abs/2602.16763">When AI Benchmarks Plateau: A Systematic Study of Benchmark Saturation</a> Mubashara Akhtar et al.</li>
-		<li class="paper"><a href="https://arxiv.org/abs/2509.14233">Apertus: Democratizing Open and Compliant LLMs for Global Language Environments</a> Tiancheng Chen et al.</li>
-		
-		<li class="paper"><a href="https://arxiv.org/abs/2507.05010">Co-DETECT: Collaborative Discovery of Edge Cases in Text Classification</a> <b>(EMNLP 2025 Demo)</b> Chenfei Xiong*, <b>Jingwei Ni*</b>, Yu Fan*, Vilém Zouhar, Donya Rooein, Lorena Calvo-Bartolomé, Alexander Hoyle, Zhijing Jin, Mrinmaya Sachan, Markus Leippold, Dirk Hovy, Mennatallah El-Assady, Elliott Ash</li>
-		<li class="paper"><a href="https://arxiv.org/abs/2505.12864">LEXam: Benchmarking Legal Reasoning on 340 Law Exams</a> <b>(ICLR 2026)</b> Yu Fan et al.</li>
-		<li class="paper"><a href="https://arxiv.org/abs/2506.19467">Can Reasoning Help Large Language Models Capture Human Annotator Disagreement?</a> <b>(Under Review)</b> <b>Jingwei Ni*</b>, Yu Fan*, Vilém Zouhar, Donya Rooein, Alexander Hoyle, Mrinmaya Sachan, Markus Leippold, Dirk Hovy, Elliott Ash</li>
-		<li class="paper"><a href="https://arxiv.org/abs/2502.11962">Balancing Truthfulness and Informativeness with Uncertainty-Aware Instruction Fine-Tuning</a> <b>(Under Review)</b> Tianyi Wu*, <b>Jingwei Ni*</b>, Bryan Hooi, Jiaheng Zhang, Elliott Ash, See-Kiong Ng, Mrinmaya Sachan, Markus Leippold</li>
-		<li class="paper"><a href="https://arxiv.org/abs/2406.14162">DIRAS: Efficient LLM-Assisted Annotation of Document Relevance in Retrieval Augmented Generation</a> <b>(NAACL 2025 Main)</b> <b>Jingwei Ni</b>, Tobias Schimanski, Meihong Lin, Mrinmaya Sachan, Elliott Ash, Markus Leippold</li>
-		<li class="paper"><a href="https://arxiv.org/abs/2406.09818">ClimRetrieve: A Benchmarking Dataset for Information Retrieval from Corporate Climate Disclosures</a> <b>(EMNLP 2024 Main)</b> Tobias Schimanski, <b>Jingwei Ni</b>, Roberto Spacey, Nicola Ranger, Markus Leippold</li>
-		<li class="paper"><a href="https://arxiv.org/abs/2402.08277">Towards Faithful and Robust LLM Specialists for Evidence-Based Question-Answering</a> <b>(ACL 2024 Main)</b> Tobias Schimanski*, <b>Jingwei Ni*</b>, Mathias Kraus, Elliott Ash, Markus Leippold</li>
-		<li class="paper"><a href="https://arxiv.org/abs/2402.11073">AFaCTA: Assisting the Annotation of Factual Claim Detection with Reliable LLM Annotators</a> <b>(ACL 2024 Main)</b> <b>Jingwei Ni</b>, Minjing Shi, Dominik Stammbach, Mrinmaya Sachan, Elliott Ash, Markus Leippold</li>
-		<li class="paper"><a href="https://arxiv.org/abs/2401.12566">Automated Fact-Checking of Climate Change Claims with Large Language Models</a> Markus Leippold, Saeid Ashraf Vaghefi, Dominik Stammbach, Veruska Muccione, Julia Bingler, <b>Jingwei Ni</b>, Chiara Colesanti-Senni, Tobias Wekhof, Tobias Schimanski, Glen Gostlow, Tingyu Yu, Juerg Luterbacher, Christian Huggel</li>
-		<li class="paper"><a href="https://arxiv.org/abs/2312.17337">Exploring Nature: Datasets and Models for Analyzing Nature-Related Disclosures</a> <b>(AAAI 2024 Workshop on AI in Finance for Social Impact)</b> Tobias Schimanski, Chiara Colesanti Senni, Glen Gostlow, <b>Jingwei Ni</b>, Tingyu Yu, Markus Leippold</li>
-                <li class="paper"><a href="https://arxiv.org/abs/2307.15770">CHATREPORT: Democratizing Sustainability Disclosure Analysis through LLM-based Tools</a> <b>(EMNLP 2023 Demo)</b> <b>Jingwei Ni</b>, Julia Bingler, Chiara Colesanti-Senni, Mathias Kraus, Glen Gostlow, Tobias Schimanski, Dominik Stammbach, Saeid Ashraf Vaghefi, Qian Wang, Nicolas Webersinke, Tobias Wekhof, Tingyu Yu, Markus Leippold</li>
-                <li class="paper"><a href="https://arxiv.org/abs/2305.14007">When Does Aggregating Multiple Skills with Multi-Task Learning Work? A Case Study in Financial NLP</a> <b>(ACL 2023 Main)</b> <b>Jingwei Ni</b>, Zhijing Jin, Qian Wang, Mrinmaya Sachan, Markus Leippold</li>
-                <li class="paper"><a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4414628">ChatClimate: Grounding Conversational AI in Climate Science</a> <b>(Nature Communications Earth & Environment)</b> Saeid Ashraf Vaghefi, Qian Wang, Veruska Muccione, <b>Jingwei Ni</b>, Mathias Kraus, Julia Bingler, Tobias Schimanski, Chiara Colesanti-Senni, Nicolas Webersinke, Christrian Huggel, Markus Leippold</li>
-                <li class="paper"><a href="https://aclanthology.org/2022.naacl-main.389/">Original or translated? A causal analysis of the impact of translationese on machine translation performance</a> <b>(NAACL 2022 Main)</b> <b>Jingwei Ni</b>, Zhijing Jin, Markus Freitag, Mrinmaya Sachan, Bernhard Schölkopf</li>
-                <li class="paper"><a href="https://aclanthology.org/2021.emnlp-main.748/">Causal Direction of Data Collection Matters: Implications of Causal and Anticausal Learning for NLP</a> <b>(EMNLP 2021 Main)</b> Zhijing Jin, Julius von Kügelgen, <b>Jingwei Ni</b>, Tejas Vaidhya, Ayush Kaushal, Mrinmaya Sachan, Bernhard Schoelkopf</li>
-		</ul>
-            
-            </div>
-
-            <div class="row">
-              <div class="col-md-8">
-                <h2 id="education">Education</h2>
-      
-                <strong>PhD @ ETH D-GESS</strong><br>
-                <p>
-                  ETH & UZH (Mar 2023 – Present)
-                </p>
-      
-                <strong>MSc in Data Science and Machine Learning</strong><br>
-                <p>
-                  University College London (Sept 2021 – Sept 2022)<br>
-                </p>
-      
-                <strong>BSc in Computer Science</strong><br>
-                <p>
-                  University of Hong Kong (Sep 2017 – Sep 2021)
-                </p>
-              </div>
-            </div>
-
-            
+          <div class="hero-actions" aria-label="Contact and profile links">
+            <a class="button primary" href="mailto:jingni@ethz.ch">Email</a>
+            <a class="button secondary" href="Ni_Jingwei_s_CV.pdf">CV (PDF)</a>
+            <a class="button secondary" href="https://scholar.google.com/citations?hl=en&user=y7A_izwAAAAJ">Scholar</a>
+          </div>
         </div>
 
+        <aside class="hero-portrait" aria-label="Profile summary">
+          <div class="portrait-frame">
+            <img src="photo.jpg" alt="Portrait of Jingwei Ni">
+          </div>
+          <div class="profile-card">
+            <p class="plate-line"><span>Name</span><strong>Jingwei Ni</strong></p>
+            <p class="plate-line"><span>Role</span>PhD Student in NLP</p>
+            <p class="plate-line"><span>Desk</span>ETH Zürich · IFW-E-44</p>
+            <div class="profile-links">
+              <a href="mailto:jingni@ethz.ch">jingni@ethz.ch</a>
+              <a href="mailto:jingweini8@gmail.com">jingweini8@gmail.com</a>
+            </div>
+          </div>
+        </aside>
+      </div>
 
+      <div class="container">
+        <article class="featured-paper" data-reveal>
+          <div class="featured-body">
+            <p class="readout">Featured paper</p>
+            <h2><a href="https://arxiv.org/abs/2511.06209">ReProbe: Efficient Test-Time Scaling of Multi-Step Reasoning by Probing Internal States of Large Language Models</a></h2>
+            <p class="featured-authors">Jingwei Ni et al. · 2025</p>
+          </div>
+          <div class="featured-meta">
+            <span class="tag tag-oral">ACL 2026 Oral</span>
+            <a class="featured-link" href="https://arxiv.org/abs/2511.06209">Read paper →</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section-band intro-band">
+      <div class="container intro-grid">
+        <div class="intro-head">
+          <p class="readout">About</p>
+          <h2 class="section-title">Research grounded in reliability, oversight, and high-impact AI use.</h2>
+        </div>
+        <div class="prose" data-reveal>
+          <p>
+            I am a dedicated AI researcher passionate about building trustworthy AI systems that can make the future better.
+            I am currently pursuing my PhD (2023–2027, expected) under the joint supervision of
+            <a href="https://elliottash.com/">Prof. Elliott Ash</a> and
+            <a href="http://www.mrinmaya.io/">Prof. Mrinmaya Sachan</a> at
+            <a href="https://ethz.ch/en.html">ETH Zurich</a>, and
+            <a href="https://www.bf.uzh.ch/en/persons/leippold-markus">Prof. Markus Leippold</a> at
+            <a href="https://www.uzh.ch/en.html">University of Zurich</a>.
+            I divide my time equally between both institutions.
+          </p>
+          <p>
+            By advancing AI application trustworthiness, I aim to strengthen the reliability of AI in high-impact areas such as
+            <strong>NLP for climate change</strong> and <strong>Legal NLP</strong>.
+            I like to aim high while keeping my feet firmly on the ground.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-band" id="research">
+      <div class="container">
+        <div class="section-heading" data-reveal>
+          <p class="readout">Research focus</p>
+          <h2 class="section-title">From a model's hidden uncertainty to human oversight.</h2>
+        </div>
+        <div class="focus-grid">
+          <article class="focus-card" data-reveal>
+            <span class="focus-tag">Step 01 · Mine</span>
+            <h3>Mine uncertainty from the model</h3>
+            <p>
+              Extract reliable uncertainty signals from large language models — probing internal states, quantifying uncertainty without interrupting generation, and fine-tuning models to recognize the limits of what they know.
+            </p>
+          </article>
+          <span class="focus-arrow" aria-hidden="true">→</span>
+          <article class="focus-card accent" data-reveal>
+            <span class="focus-tag">Step 02 · Expose</span>
+            <h3>Expose it for human supervision</h3>
+            <p>
+              Turn that signal into oversight people can act on — external verifiers, edge-case discovery, faithful evidence-grounded answers, and the output formats, interfaces, and visualizations built for human and machine review.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-band service-band" id="events">
+      <div class="container">
+        <div class="section-heading" data-reveal>
+          <p class="readout">Projects &amp; community service</p>
+          <h2 class="section-title">Open models, climate NLP, and research communities.</h2>
+        </div>
+        <div class="project-grid">
+          <article class="project-card" data-reveal>
+            <p class="readout">Community collaboration</p>
+            <h3>Apertus: Democratizing Open and Compliant LLMs</h3>
+            <p>Community collaboration on democratizing open and compliant LLMs for global language environments, with contributions to trustworthiness post-training.</p>
+            <a class="card-link" href="https://arxiv.org/abs/2509.14233">Technical report →</a>
+          </article>
+          <article class="project-card" data-reveal>
+            <p class="readout">Community collaboration</p>
+            <h3>When AI Benchmarks Plateau</h3>
+            <p>Community collaboration accepted to ICML 2026 on benchmark saturation and how plateauing scores affect evaluation practice.</p>
+            <a class="card-link" href="https://arxiv.org/abs/2602.16763">ICML 2026 →</a>
+          </article>
+          <article class="project-card" data-reveal>
+            <p class="readout">Workshop</p>
+            <h3>ClimateNLP at ACL 2025</h3>
+            <p>Organizing the second ClimateNLP workshop at ACL 2025, Vienna.</p>
+            <div class="inline-links">
+              <a href="https://aclanthology.org/2025.climatenlp-1.0/">Proceedings</a>
+              <a href="https://nlp4climate.github.io/">Workshop site</a>
+            </div>
+          </article>
+          <article class="project-card" data-reveal>
+            <p class="readout">Workshop</p>
+            <h3>ClimateNLP at ACL 2024</h3>
+            <p>Organized the first ClimateNLP workshop at ACL 2024, Bangkok.</p>
+            <div class="inline-links">
+              <a href="https://aclanthology.org/volumes/2024.climatenlp-1/">Proceedings</a>
+              <a href="https://nlp4climate.github.io/climatenlp2024/">Workshop site</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-band" id="publications">
+      <div class="container">
+        <div class="section-heading publications-heading" data-reveal>
+          <div>
+            <p class="readout">Publications</p>
+            <h2 class="section-title">Selected research</h2>
+          </div>
+          <p class="section-note">Mining uncertainty from language models — and the verifiers, annotations, and interfaces that surface it for people.</p>
+        </div>
+
+        <div class="selected-grid">
+          <article class="publication-card" data-reveal>
+            <div class="publication-meta">
+              <span class="pub-year">2025</span>
+              <span class="tag tag-oral">ACL 2026 Oral</span>
+            </div>
+            <h3><a href="https://arxiv.org/abs/2511.06209">ReProbe: Efficient Test-Time Scaling of Multi-Step Reasoning by Probing Internal States of Large Language Models</a></h3>
+            <p class="pub-tldr">Reads the model's own internal states mid-reasoning to tell when an answer has settled, scaling test-time reasoning only as far as the model actually needs.</p>
+            <p class="pub-authors">Jingwei Ni et al.</p>
+          </article>
+          <article class="publication-card" data-reveal>
+            <div class="publication-meta">
+              <span class="pub-year">2025</span>
+              <span class="tag tag-oral">EACL 2026 Oral</span>
+            </div>
+            <h3><a href="https://arxiv.org/abs/2506.19467">Can Reasoning Help Large Language Models Capture Human Annotator Disagreement?</a></h3>
+            <p class="pub-tldr">Tests whether reasoning lets a model recognize when a question is genuinely contested, instead of collapsing real human disagreement into one overconfident answer.</p>
+            <p class="pub-authors">Jingwei Ni*, Yu Fan* et al.</p>
+          </article>
+          <article class="publication-card" data-reveal>
+            <div class="publication-meta">
+              <span class="pub-year">2025</span>
+              <span class="tag">NAACL 2025 Long</span>
+            </div>
+            <h3><a href="https://arxiv.org/abs/2406.14162">DIRAS: Efficient LLM Annotation of Document Relevance for Retrieval Augmented Generation</a></h3>
+            <p class="pub-tldr">Trains small, cheap models to judge whether retrieved documents are truly relevant, giving RAG an external check on its evidence before the generator ever sees it.</p>
+            <p class="pub-authors">Jingwei Ni et al.</p>
+          </article>
+          <article class="publication-card" data-reveal>
+            <div class="publication-meta">
+              <span class="pub-year">2025</span>
+              <span class="tag">EMNLP Demo</span>
+            </div>
+            <h3><a href="https://arxiv.org/abs/2507.05010">Co-DETECT: Collaborative Discovery of Edge Cases in Text Classification</a></h3>
+            <p class="pub-tldr">Pairs human annotators with an LLM to surface the edge cases a classifier quietly gets wrong, pointing oversight straight at the model's blind spots.</p>
+            <p class="pub-authors">Chenfei Xiong*, Jingwei Ni* et al.</p>
+          </article>
+          <article class="publication-card" data-reveal>
+            <div class="publication-meta">
+              <span class="pub-year">2024</span>
+              <span class="tag">ACL 2024 Long</span>
+            </div>
+            <h3><a href="https://arxiv.org/abs/2402.08277">Towards Faithful and Robust LLM Specialists for Evidence-Based Question-Answering</a></h3>
+            <p class="pub-tldr">Trains open QA specialists to answer strictly from the evidence they are given and resist being misled when it is noisy or missing — keeping every answer traceable to its source.</p>
+            <p class="pub-authors">Tobias Schimanski*, Jingwei Ni* et al.</p>
+          </article>
+          <article class="publication-card" data-reveal>
+            <div class="publication-meta">
+              <span class="pub-year">2024</span>
+              <span class="tag">ACL 2024 Long</span>
+            </div>
+            <h3><a href="https://arxiv.org/abs/2402.11073">AFaCTA: Assisting the Annotation of Factual Claim Detection with Reliable LLM Annotators</a></h3>
+            <p class="pub-tldr">Cross-checks several LLM annotators against each other to reliably flag which sentences are checkable factual claims — the first filter any fact-verification pipeline needs.</p>
+            <p class="pub-authors">Jingwei Ni et al.</p>
+          </article>
+        </div>
+
+        <div class="publication-list-block">
+          <div class="list-head">
+            <h2>Full publication list</h2>
+            <p class="readout"><span class="dot signal"></span>Accepted&nbsp;&nbsp;<span class="dot trace"></span>In review / preprint</p>
+          </div>
+          <div class="publication-table" role="list">
+            <article class="publication-entry featured-entry" role="listitem">
+              <div class="publication-index">01</div>
+              <div class="publication-body">
+                <div class="publication-tags">
+                  <span class="pub-year">2025</span>
+                  <span class="tag tag-oral">ACL 2026 Oral</span>
+                </div>
+                <h3><a href="https://arxiv.org/abs/2511.06209">ReProbe: Efficient Test-Time Scaling of Multi-Step Reasoning by Probing Internal States of Large Language Models</a></h3>
+              </div>
+            </article>
+            <article class="publication-entry" role="listitem">
+              <div class="publication-index">02</div>
+              <div class="publication-body">
+                <div class="publication-tags">
+                  <span class="pub-year">2026</span>
+                  <span class="tag tag-pending">Preprint</span>
+                </div>
+                <h3><a href="https://arxiv.org/abs/2606.16771">GD<sup>2</sup>PO: Mitigating Multi-Reward Conflicts via Group-Dynamic reward-Decoupled Policy Optimization</a></h3>
+              </div>
+            </article>
+            <article class="publication-entry" role="listitem">
+              <div class="publication-index">03</div>
+              <div class="publication-body">
+                <div class="publication-tags">
+                  <span class="pub-year">2026</span>
+                  <span class="tag tag-pending">Preprint</span>
+                </div>
+                <h3><a href="https://arxiv.org/abs/2606.03980">Skill-RM: Unifying Heterogeneous Evaluation Criteria via Agent Skill</a></h3>
+              </div>
+            </article>
+            <article class="publication-entry" role="listitem">
+              <div class="publication-index">04</div>
+              <div class="publication-body">
+                <div class="publication-tags">
+                  <span class="pub-year">2026</span>
+                  <span class="tag">ACL 2026</span>
+                </div>
+                <h3><a href="https://arxiv.org/abs/2606.01020">Tackling the Root of Misinformation by Teaching Laypeople about Logical Fallacies via Socratic Questioning and Critical Argumentation</a></h3>
+              </div>
+            </article>
+            <article class="publication-entry" role="listitem">
+              <div class="publication-index">05</div>
+              <div class="publication-body">
+                <div class="publication-tags">
+                  <span class="pub-year">2026</span>
+                  <span class="tag">ACL 2026 Demo</span>
+                </div>
+                <h3><a href="https://arxiv.org/abs/2606.06915">ThinkBooster: A Unified Framework for Seamless Test-Time Scaling of LLM Reasoning</a></h3>
+              </div>
+            </article>
+            <article class="publication-entry" role="listitem">
+              <div class="publication-index">06</div>
+              <div class="publication-body">
+                <div class="publication-tags">
+                  <span class="pub-year">2026</span>
+                  <span class="tag tag-pending">Preprint</span>
+                </div>
+                <h3><a href="https://arxiv.org/abs/2603.25158">Trace2Skill: Distill Trajectory-Local Lessons into Transferable Agent Skills</a></h3>
+              </div>
+            </article>
+            <article class="publication-entry" role="listitem">
+              <div class="publication-index">07</div>
+              <div class="publication-body">
+                <div class="publication-tags">
+                  <span class="pub-year">2026</span>
+                  <span class="tag tag-pending">Preprint</span>
+                </div>
+                <h3><a href="https://arxiv.org/abs/2601.02285">pdfQA: Diverse, Challenging, and Realistic Question Answering over PDFs</a></h3>
+              </div>
+            </article>
+            <article class="publication-entry" role="listitem">
+              <div class="publication-index">08</div>
+              <div class="publication-body">
+                <div class="publication-tags">
+                  <span class="pub-year">2025</span>
+                  <span class="tag">EMNLP Demo</span>
+                </div>
+                <h3><a href="https://arxiv.org/abs/2507.05010">Co-DETECT: Collaborative Discovery of Edge Cases in Text Classification</a></h3>
+              </div>
+            </article>
+            <article class="publication-entry" role="listitem">
+              <div class="publication-index">09</div>
+              <div class="publication-body">
+                <div class="publication-tags">
+                  <span class="pub-year">2025</span>
+                  <span class="tag">SIGIR 2026</span>
+                </div>
+                <h3><a href="https://arxiv.org/abs/2510.05336">WeatherArchive-Bench: Benchmarking Retrieval-Augmented Reasoning for Historical Weather Archives</a></h3>
+              </div>
+            </article>
+            <article class="publication-entry" role="listitem">
+              <div class="publication-index">10</div>
+              <div class="publication-body">
+                <div class="publication-tags">
+                  <span class="pub-year">2025</span>
+                  <span class="tag">ICLR 2026</span>
+                </div>
+                <h3><a href="https://arxiv.org/abs/2505.12864">LEXam: Benchmarking Legal Reasoning on 340 Law Exams</a></h3>
+              </div>
+            </article>
+            <article class="publication-entry" role="listitem">
+              <div class="publication-index">11</div>
+              <div class="publication-body">
+                <div class="publication-tags">
+                  <span class="pub-year">2025</span>
+                  <span class="tag tag-oral">EACL 2026 Oral</span>
+                </div>
+                <h3><a href="https://arxiv.org/abs/2506.19467">Can Reasoning Help Large Language Models Capture Human Annotator Disagreement?</a></h3>
+              </div>
+            </article>
+            <article class="publication-entry" role="listitem">
+              <div class="publication-index">12</div>
+              <div class="publication-body">
+                <div class="publication-tags">
+                  <span class="pub-year">2025</span>
+                  <span class="tag tag-pending">Preprint</span>
+                </div>
+                <h3><a href="https://arxiv.org/abs/2502.11962">Balancing Truthfulness and Informativeness with Uncertainty-Aware Instruction Fine-Tuning</a></h3>
+              </div>
+            </article>
+            <article class="publication-entry" role="listitem">
+              <div class="publication-index">13</div>
+              <div class="publication-body">
+                <div class="publication-tags">
+                  <span class="pub-year">2025</span>
+                  <span class="tag">NAACL Main</span>
+                </div>
+                <h3><a href="https://arxiv.org/abs/2406.14162">DIRAS: Efficient LLM-Assisted Annotation of Document Relevance in Retrieval Augmented Generation</a></h3>
+              </div>
+            </article>
+            <article class="publication-entry" role="listitem">
+              <div class="publication-index">14</div>
+              <div class="publication-body">
+                <div class="publication-tags">
+                  <span class="pub-year">2024</span>
+                  <span class="tag">EMNLP Main</span>
+                </div>
+                <h3><a href="https://arxiv.org/abs/2406.09818">ClimRetrieve: A Benchmarking Dataset for Information Retrieval from Corporate Climate Disclosures</a></h3>
+              </div>
+            </article>
+            <article class="publication-entry" role="listitem">
+              <div class="publication-index">15</div>
+              <div class="publication-body">
+                <div class="publication-tags">
+                  <span class="pub-year">2024</span>
+                  <span class="tag">ACL Main</span>
+                </div>
+                <h3><a href="https://arxiv.org/abs/2402.08277">Towards Faithful and Robust LLM Specialists for Evidence-Based Question-Answering</a></h3>
+              </div>
+            </article>
+            <article class="publication-entry" role="listitem">
+              <div class="publication-index">16</div>
+              <div class="publication-body">
+                <div class="publication-tags">
+                  <span class="pub-year">2024</span>
+                  <span class="tag">ACL Main</span>
+                </div>
+                <h3><a href="https://arxiv.org/abs/2402.11073">AFaCTA: Assisting the Annotation of Factual Claim Detection with Reliable LLM Annotators</a></h3>
+              </div>
+            </article>
+            <article class="publication-entry" role="listitem">
+              <div class="publication-index">17</div>
+              <div class="publication-body">
+                <div class="publication-tags">
+                  <span class="pub-year">2024</span>
+                  <span class="tag">Article</span>
+                </div>
+                <h3><a href="https://arxiv.org/abs/2401.12566">Automated Fact-Checking of Climate Change Claims with Large Language Models</a></h3>
+              </div>
+            </article>
+            <article class="publication-entry" role="listitem">
+              <div class="publication-index">18</div>
+              <div class="publication-body">
+                <div class="publication-tags">
+                  <span class="pub-year">2023</span>
+                  <span class="tag">AAAI Workshop</span>
+                </div>
+                <h3><a href="https://arxiv.org/abs/2312.17337">Exploring Nature: Datasets and Models for Analyzing Nature-Related Disclosures</a></h3>
+              </div>
+            </article>
+            <article class="publication-entry" role="listitem">
+              <div class="publication-index">19</div>
+              <div class="publication-body">
+                <div class="publication-tags">
+                  <span class="pub-year">2023</span>
+                  <span class="tag">EMNLP Demo</span>
+                </div>
+                <h3><a href="https://arxiv.org/abs/2307.15770">CHATREPORT: Democratizing Sustainability Disclosure Analysis through LLM-based Tools</a></h3>
+              </div>
+            </article>
+            <article class="publication-entry" role="listitem">
+              <div class="publication-index">20</div>
+              <div class="publication-body">
+                <div class="publication-tags">
+                  <span class="pub-year">2023</span>
+                  <span class="tag">ACL Main</span>
+                </div>
+                <h3><a href="https://arxiv.org/abs/2305.14007">When Does Aggregating Multiple Skills with Multi-Task Learning Work? A Case Study in Financial NLP</a></h3>
+              </div>
+            </article>
+            <article class="publication-entry" role="listitem">
+              <div class="publication-index">21</div>
+              <div class="publication-body">
+                <div class="publication-tags">
+                  <span class="pub-year">2023</span>
+                  <span class="tag">Nature Comms E&amp;E</span>
+                </div>
+                <h3><a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4414628">ChatClimate: Grounding Conversational AI in Climate Science</a></h3>
+              </div>
+            </article>
+            <article class="publication-entry" role="listitem">
+              <div class="publication-index">22</div>
+              <div class="publication-body">
+                <div class="publication-tags">
+                  <span class="pub-year">2022</span>
+                  <span class="tag">NAACL Main</span>
+                </div>
+                <h3><a href="https://aclanthology.org/2022.naacl-main.389/">Original or translated? A causal analysis of the impact of translationese on machine translation performance</a></h3>
+              </div>
+            </article>
+            <article class="publication-entry" role="listitem">
+              <div class="publication-index">23</div>
+              <div class="publication-body">
+                <div class="publication-tags">
+                  <span class="pub-year">2021</span>
+                  <span class="tag">EMNLP Main</span>
+                </div>
+                <h3><a href="https://aclanthology.org/2021.emnlp-main.748/">Causal Direction of Data Collection Matters: Implications of Causal and Anticausal Learning for NLP</a></h3>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-band education-band" id="education">
+      <div class="container education-grid">
+        <div class="education-head" data-reveal>
+          <p class="readout">Education</p>
+          <h2 class="section-title">Academic path</h2>
+        </div>
+        <div class="timeline">
+          <article class="timeline-item" data-reveal>
+            <span class="timeline-date">Mar 2023 – Present</span>
+            <h3>PhD @ ETH D-GESS</h3>
+            <p>ETH Zürich &amp; University of Zürich</p>
+          </article>
+          <article class="timeline-item" data-reveal>
+            <span class="timeline-date">Sept 2021 – Sept 2022</span>
+            <h3>MSc in Data Science &amp; Machine Learning</h3>
+            <p>University College London</p>
+          </article>
+          <article class="timeline-item" data-reveal>
+            <span class="timeline-date">Sep 2017 – Sep 2021</span>
+            <h3>BSc in Computer Science</h3>
+            <p>University of Hong Kong</p>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <p>Jingwei Ni · Trustworthy AI Research</p>
+      <div class="footer-links">
+        <a href="https://scholar.google.com/citations?hl=en&user=y7A_izwAAAAJ">Google Scholar</a>
+        <a href="https://twitter.com/NJingwei">Twitter</a>
+        <a href="https://www.linkedin.com/in/jingwei-ni-8a9293152">LinkedIn</a>
+      </div>
     </div>
-    <!-- /.container -->
-    
-    <!-- Other people may like it too! -->
-    <a style="color:#b5bec9;font-size:0.8em; float:right;" href="https://github.com/mavroudisv/plain-academic">Plain Academic</a> 
-    
-</body>
+  </footer>
 
+  <script>
+    document.documentElement.classList.add('js');
+    (function () {
+      var reduce = window.matchMedia('(prefers-reduced-motion: reduce)');
+      if (reduce.matches) {
+        document.querySelectorAll('[data-reveal]').forEach(function (el) { el.classList.add('in'); });
+        return;
+      }
+      if (!('IntersectionObserver' in window)) {
+        document.querySelectorAll('[data-reveal]').forEach(function (el) { el.classList.add('in'); });
+        return;
+      }
+      var io = new IntersectionObserver(function (entries) {
+        entries.forEach(function (e) {
+          if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
+        });
+      }, { threshold: 0.12, rootMargin: '0px 0px -8% 0px' });
+      document.querySelectorAll('[data-reveal]').forEach(function (el) { io.observe(el); });
+    })();
+  </script>
+</body>
 </html>

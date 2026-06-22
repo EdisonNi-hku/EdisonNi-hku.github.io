@@ -287,90 +287,23 @@ h1 {
   line-height: 1.55;
 }
 
-/* ---- signature: calibration gauge ------------------------------------ */
+/* ---- signature: hero figure ------------------------------------------ */
 
-.gauge {
+.hero-figure {
   margin: 0 0 32px;
-  padding: 18px 20px 16px;
-  max-width: 480px;
-  border: 1px solid var(--line-strong);
+  max-width: 540px;
+  border: 1px solid var(--line);
   border-radius: var(--radius);
-  background: color-mix(in srgb, var(--surface) 88%, transparent);
+  overflow: hidden;
+  background: var(--surface);
+  box-shadow: 0 12px 30px rgba(22, 24, 29, 0.09);
 }
 
-.gauge-head {
-  display: flex;
-  align-items: baseline;
-  justify-content: space-between;
-  gap: 12px;
-  margin-bottom: 14px;
-  font-family: var(--mono);
-  font-size: 0.7rem;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
+.hero-figure img {
+  display: block;
+  width: 100%;
+  height: auto;
 }
-
-.gauge-label { color: var(--ink); font-weight: 700; }
-.gauge-readout { color: var(--muted); }
-
-.gauge-track {
-  position: relative;
-  height: 12px;
-  border-radius: 999px;
-  background: var(--paper-2);
-  box-shadow: inset 0 0 0 1px var(--line);
-}
-
-.gauge-ticks {
-  position: absolute;
-  inset: -7px 0 auto 0;
-  height: 6px;
-  background-image: repeating-linear-gradient(
-    90deg,
-    var(--line-strong) 0 1px,
-    transparent 1px 10%
-  );
-}
-
-.gauge-fill {
-  position: absolute;
-  inset: 0 auto 0 0;
-  width: 82%;
-  border-radius: 999px;
-  background: linear-gradient(90deg, var(--signal) 0%, color-mix(in srgb, var(--signal) 78%, #5b86e8) 100%);
-}
-
-.gauge-needle {
-  position: absolute;
-  top: 50%;
-  left: 82%;
-  width: 16px;
-  height: 16px;
-  transform: translate(-50%, -50%);
-  border-radius: 50%;
-  background: var(--trace);
-  border: 3px solid var(--surface);
-  box-shadow: 0 0 0 1px var(--trace);
-}
-
-.gauge-scale {
-  display: flex;
-  justify-content: space-between;
-  margin-top: 9px;
-  font-family: var(--mono);
-  font-size: 0.66rem;
-  letter-spacing: 0.04em;
-  color: var(--muted);
-}
-
-.gauge-scale span:nth-child(2) { text-transform: uppercase; }
-
-/* entrance sweep — only with JS, only when motion is allowed */
-.js .gauge-fill { animation: gauge-fill 1.5s cubic-bezier(0.16, 0.84, 0.32, 1) 0.35s both; }
-.js .gauge-needle { animation: gauge-needle 1.5s cubic-bezier(0.16, 0.84, 0.32, 1) 0.35s both; }
-
-@keyframes gauge-fill { from { width: 0; } to { width: 82%; } }
-@keyframes gauge-needle { from { left: 0; } to { left: 82%; } }
 
 /* ---- buttons ---------------------------------------------------------- */
 
@@ -849,6 +782,13 @@ h1 {
   line-height: 1.3;
 }
 
+.mentor-student {
+  margin: 6px 0 0;
+  color: var(--muted);
+  font-family: var(--mono);
+  font-size: 0.72rem;
+}
+
 .publication-entry h3 a { color: var(--ink); text-decoration: none; }
 .publication-entry h3 a:hover,
 .publication-entry h3 a:focus-visible { color: var(--signal-ink); text-decoration: underline; }
@@ -974,7 +914,7 @@ h1 {
 
   h1 { font-size: clamp(2.3rem, 11vw, 3rem); max-width: none; }
 
-  .gauge { max-width: none; }
+  .hero-figure { max-width: none; }
 
   .project-grid,
   .selected-grid { grid-template-columns: 1fr; }
@@ -1006,6 +946,4 @@ h1 {
   }
 
   .js [data-reveal] { opacity: 1; transform: none; }
-  .gauge-fill { width: 82%; }
-  .gauge-needle { left: 82%; }
 }

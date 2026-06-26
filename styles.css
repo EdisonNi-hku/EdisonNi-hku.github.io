@@ -571,14 +571,7 @@ h1 {
 
 .focus-card p { margin: 0; color: var(--body); }
 
-.focus-lead { max-width: 76ch; margin-bottom: clamp(26px, 4vw, 42px); }
-
-.focus-lead p {
-  margin: 0;
-  color: var(--ink-soft);
-  font-size: clamp(1.04rem, 1.6vw, 1.22rem);
-  line-height: 1.6;
-}
+.focus-block { margin-top: clamp(34px, 5vw, 58px); }
 
 .focus-grid.pair { gap: 18px; }
 

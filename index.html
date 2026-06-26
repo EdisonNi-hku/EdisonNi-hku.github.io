@@ -8,7 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=3">
+  <link rel="stylesheet" href="styles.css?v=4">
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
@@ -84,11 +84,11 @@
       </div>
     </section>
 
-    <section class="section-band intro-band">
+    <section class="section-band intro-band" id="research">
       <div class="container intro-grid">
-        <div class="intro-head">
-          <p class="readout">About</p>
-          <h2 class="section-title">Research grounded in reliability, oversight, and high-impact AI use.</h2>
+        <div class="intro-head" data-reveal>
+          <p class="readout">About · Research</p>
+          <h2 class="section-title">From a model's hidden uncertainty to human oversight.</h2>
         </div>
         <div class="prose" data-reveal>
           <p>
@@ -102,25 +102,16 @@
             I divide my time equally between both institutions.
           </p>
           <p>
+            I build AI systems that know when to be trusted: I extract the uncertainty a model already carries and expose it for human supervision. One requirement sits behind everything — a model should report low confidence whenever it is likely to be wrong — and that single reporting ability is what makes oversight possible. What changes is how tractable the problem is, and that turns on whether the uncertainty is objectively checkable.
+          </p>
+          <p>
             These methods matter most where the stakes are high and people stay accountable for the answer — which is why I ground them in
             <strong>climate</strong> and <strong>law</strong>. From corporate climate disclosures to legal reasoning, an unverified claim can sway policy or judgment, so domain experts need to see exactly how far to trust a model.
             I like to aim high while keeping my feet firmly on the ground.
           </p>
         </div>
       </div>
-    </section>
-
-    <section class="section-band" id="research">
-      <div class="container">
-        <div class="section-heading" data-reveal>
-          <p class="readout">Research focus</p>
-          <h2 class="section-title">From a model's hidden uncertainty to human oversight.</h2>
-        </div>
-        <div class="focus-lead" data-reveal>
-          <p>
-            I build AI systems that know when to be trusted: I extract the uncertainty a model already carries and expose it for human supervision. One requirement sits behind everything — a model should report low confidence whenever it is likely to be wrong — and that single reporting ability is what makes oversight possible. What changes is how tractable the problem is, and that turns on whether the uncertainty is objectively checkable.
-          </p>
-        </div>
+      <div class="container focus-block">
         <div class="focus-grid pair">
           <article class="focus-card" data-reveal>
             <span class="focus-tag">Where the signal is checkable</span>

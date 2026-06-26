@@ -8,7 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=2">
+  <link rel="stylesheet" href="styles.css?v=3">
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
@@ -116,22 +116,29 @@
           <p class="readout">Research focus</p>
           <h2 class="section-title">From a model's hidden uncertainty to human oversight.</h2>
         </div>
-        <div class="focus-grid">
+        <div class="focus-lead" data-reveal>
+          <p>
+            I build AI systems that know when to be trusted: I extract the uncertainty a model already carries and expose it for human supervision. One requirement sits behind everything — a model should report low confidence whenever it is likely to be wrong — and that single reporting ability is what makes oversight possible. What changes is how tractable the problem is, and that turns on whether the uncertainty is objectively checkable.
+          </p>
+        </div>
+        <div class="focus-grid pair">
           <article class="focus-card" data-reveal>
-            <span class="focus-tag">Step 01 · Mine</span>
-            <h3>Mine uncertainty from the model</h3>
+            <span class="focus-tag">Where the signal is checkable</span>
+            <h3>Verifiers that report confidence</h3>
             <p>
-              Extract reliable uncertainty signals from large language models — probing internal states, quantifying uncertainty without interrupting generation, and fine-tuning models to recognize the limits of what they know.
+              Verifying a math reasoning step, or whether retrieved evidence is relevant: labels are cheap, models are strong, and uncertainty can be trained and rigorously tested. Here I build non-agentic verifiers like ReProbe, which reads a model's internal states mid-reasoning to tell when an answer has settled.
             </p>
           </article>
-          <span class="focus-arrow" aria-hidden="true">→</span>
           <article class="focus-card accent" data-reveal>
-            <span class="focus-tag">Step 02 · Expose</span>
-            <h3>Expose it for human supervision</h3>
+            <span class="focus-tag">Where the labels conflict</span>
+            <h3>Surfacing contested judgments</h3>
             <p>
-              Turn that signal into oversight people can act on — external verifiers, edge-case discovery, faithful evidence-grounded answers, and the output formats, interfaces, and visualizations built for human and machine review.
+              Subjective classification and conflicting human labels — signal, not noise. I build uncertainty-aware classifiers, evidence-grounded specialists whose every claim traces to its source, and interfaces that surface the edge cases people must adjudicate.
             </p>
           </article>
+        </div>
+        <div class="focus-cta" data-reveal>
+          <a class="button secondary" href="research.html">Read the full research statement →</a>
         </div>
       </div>
     </section>

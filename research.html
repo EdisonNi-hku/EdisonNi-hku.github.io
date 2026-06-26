@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Research statement of Jingwei Ni: building AI systems that know when to be trusted by extracting the uncertainty a model already carries and exposing it for human supervision.">
+  <title>Research Statement | Jingwei Ni</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css?v=3">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <nav class="nav-shell" aria-label="Primary navigation">
+      <a class="brand-mark" href="index.html" aria-label="Jingwei Ni homepage">
+        <span>JN</span>
+      </a>
+      <div class="nav-links">
+        <a href="index.html#research">Research</a>
+        <a href="index.html#events">Projects</a>
+        <a href="index.html#publications">Publications</a>
+        <a href="index.html#education">Education</a>
+        <a href="Ni_Jingwei_s_CV.pdf">CV</a>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section class="statement-hero">
+      <div class="container">
+        <p class="readout">
+          <span>Research statement</span>
+          <span aria-hidden="true" class="readout-div">/</span>
+          <span>Jingwei Ni</span>
+        </p>
+        <h1 class="statement-title">AI systems that know when to be trusted.</h1>
+        <p class="statement-lede">
+          I extract the uncertainty a model already carries and expose it for human supervision — because a model that reliably reports when it is likely to be wrong is what makes oversight possible.
+        </p>
+        <p class="statement-back"><a href="index.html">← Back to homepage</a></p>
+      </div>
+    </section>
+
+    <section class="statement-section">
+      <div class="container">
+        <div class="section-heading" data-reveal>
+          <p class="readout">Topic</p>
+          <h2 class="section-title">One reporting ability, behind everything.</h2>
+        </div>
+        <div class="statement-body" data-reveal>
+          <p>
+            I build AI systems that know when to be trusted: I extract the uncertainty a model already carries and expose it for human supervision. One requirement sits behind everything I do — a trustworthy model should report low confidence whenever it is likely to be wrong, whatever the cause — and that single reporting ability is what makes human oversight possible. Uncertainty here comes in two flavors, epistemic (what the model doesn't know) and aleatoric (irreducible ambiguity in the world) (<a class="cite" href="#ref-huellermeier2021">Hüllermeier &amp; Waegeman, 2021</a>; <a class="cite" href="#ref-shorinwa2024">Shorinwa et al., 2024</a>); what matters for trust is that the model reports either one.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="statement-section alt">
+      <div class="container">
+        <div class="section-heading" data-reveal>
+          <p class="readout">Why this matters now</p>
+          <h2 class="section-title">Uncertainty reporting is the bottleneck.</h2>
+        </div>
+        <div class="argument-list">
+          <article class="argument" data-reveal>
+            <div class="argument-index">01</div>
+            <div class="argument-text">
+              <h3>The safer path to advanced AI runs on uncertainty reporting.</h3>
+              <p>
+                Bengio et al.'s Scientist AI makes a simple case: agentic systems tend to develop implicit, instrumental goals — self-preservation, power-seeking, reward hacking via overoptimization — that emerge regardless of their initial objective, so rather than trust an agent on its own, we supervise it with a non-agentic, uncertainty-aware system that acts as a guardrail (<a class="cite" href="#ref-bengio2025">Bengio et al., 2025</a>). Building that kind of supervisor is the tractable core of my work.
+              </p>
+            </div>
+          </article>
+          <article class="argument" data-reveal>
+            <div class="argument-index">02</div>
+            <div class="argument-text">
+              <h3>Our evaluation tools can't see disagreement.</h3>
+              <p>
+                The field ranks, filters, and aligns models with LLM-as-a-judge (<a class="cite" href="#ref-zheng2023">Zheng et al., 2023</a>; <a class="cite" href="#ref-gu2024">Gu et al., 2024</a>), but "helpful," "harmful," and "novel" are contested across legitimate viewpoints, so a judge commits to one reading and returns a confident score — leaving leaderboards most miscalibrated exactly where humans most disagree (<a class="cite" href="#ref-chochlakis2025">Chochlakis et al., 2025</a>; <a class="cite" href="#ref-baan2022">Baan et al., 2022</a>; <a class="cite" href="#ref-li2025a">Li et al., 2025a</a>).
+              </p>
+            </div>
+          </article>
+          <article class="argument" data-reveal>
+            <div class="argument-index">03</div>
+            <div class="argument-text">
+              <h3>Deployment is full of the hard kind of uncertainty.</h3>
+              <p>
+                Real instructions are underspecified and real judgments are contested, yet agents are rewarded only for producing a heuristic-verifiable correct answer in math and code (<a class="cite" href="#ref-lambert2024">Lambert et al., 2024</a>; <a class="cite" href="#ref-deepseek2025">DeepSeek-AI, 2025</a>) — never for being uncertainty-aware — so they invent the missing detail and act instead of asking (<a class="cite" href="#ref-wang2024">Wang et al., 2024</a>; <a class="cite" href="#ref-li2025b">Li et al., 2025b</a>).
+              </p>
+            </div>
+          </article>
+          <article class="argument" data-reveal>
+            <div class="argument-index">04</div>
+            <div class="argument-text">
+              <h3>Scaling will not rescue it.</h3>
+              <p>
+                When uncertainty is irreducible, more compute on the same ambiguous input cannot resolve it — and my own work shows that making models reason longer actively harms their ability to represent human disagreement (<a class="cite" href="#ref-ni2026">Ni et al., 2026</a>).
+              </p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="statement-section">
+      <div class="container">
+        <div class="section-heading" data-reveal>
+          <p class="readout">My research</p>
+          <h2 class="section-title">One goal, measured one way.</h2>
+        </div>
+        <div class="statement-body" data-reveal>
+          <p>
+            A trustworthy model should signal its own unreliability, so I evaluate every method with the same source-agnostic tools — calibration and selective-prediction AUROC — which test whether reported confidence tracks actual errors, not which kind of uncertainty caused them.
+          </p>
+          <p>
+            What changes is how tractable the problem is, and that turns on whether the uncertainty is objectively checkable. Where it is — verifying a math reasoning step, judging whether retrieved evidence is relevant — labels are cheap, models are strong, and uncertainty can be trained and rigorously tested. One favorite paper of my own, <a href="https://arxiv.org/abs/2511.06209">ReProbe</a>, lives here: it reads a model's own internal states mid-reasoning to tell when an answer has settled, scaling test-time compute only as far as needed, with indisputable gold evaluation and extensive out-of-distribution tests. It is exactly the kind of non-agentic, uncertainty-reporting verifier that Scientist AI calls for.
+          </p>
+          <p>
+            The same reporting goal extends to far less tractable terrain — subjective classification and conflicting human labels, long argued to be signal rather than noise (<a class="cite" href="#ref-plank2022">Plank, 2022</a>; <a class="cite" href="#ref-uma2021">Uma et al., 2021</a>; <a class="cite" href="#ref-xu2025">Xu et al., 2025</a>) — where I build uncertainty-aware classifiers distilled into cheap, deployable models (<a href="https://arxiv.org/abs/2402.11073">AFaCTA</a>, <a href="https://arxiv.org/abs/2406.14162">DIRAS</a>), evidence-grounded specialists whose every claim is traceable to its source (<a href="https://arxiv.org/abs/2402.08277">Evidence-Based QA</a>), and interfaces that surface the edge cases a classifier quietly gets wrong so people adjudicate the contested ones (<a href="https://arxiv.org/abs/2507.05010">Co-DETECT</a>). Here the gold signal is a distribution of disagreeing human labels — scarce, costly, and far from mainstream benchmarks — so even evaluation is an open problem. That gap is itself a central finding: because this uncertainty cannot be cheaply scored, it never enters the reward, and models are never trained to handle it.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="statement-section alt" id="references">
+      <div class="container">
+        <div class="section-heading" data-reveal>
+          <p class="readout">References</p>
+          <h2 class="section-title">Works cited.</h2>
+        </div>
+        <ul class="reference-list" data-reveal>
+          <li id="ref-huellermeier2021">
+            <span class="ref-key">Hüllermeier &amp; Waegeman, 2021</span>
+            Hüllermeier, E., &amp; Waegeman, W. (2021). Aleatoric and epistemic uncertainty in machine learning: an introduction to concepts and methods. <em>Machine Learning, 110</em>(3), 457–506. <a href="https://link.springer.com/article/10.1007/s10994-021-05946-3">link</a>
+          </li>
+          <li id="ref-shorinwa2024">
+            <span class="ref-key">Shorinwa et al., 2024</span>
+            Shorinwa, O., Mei, Z., Lidard, J., Ren, A. Z., &amp; Majumdar, A. (2024). A Survey on Uncertainty Quantification of Large Language Models: Taxonomy, Open Research Challenges, and Future Directions. <em>arXiv:2412.05563</em>. <a href="https://arxiv.org/abs/2412.05563">link</a>
+          </li>
+          <li id="ref-bengio2025">
+            <span class="ref-key">Bengio et al., 2025</span>
+            Bengio, Y., et al. (2025). Superintelligent Agents Pose Catastrophic Risks: Can Scientist AI Offer a Safer Path? <em>arXiv:2502.15657</em>. <a href="https://arxiv.org/abs/2502.15657">link</a>
+          </li>
+          <li id="ref-zheng2023">
+            <span class="ref-key">Zheng et al., 2023</span>
+            Zheng, L., et al. (2023). Judging LLM-as-a-Judge with MT-Bench and Chatbot Arena. <em>NeurIPS Datasets and Benchmarks</em>. <a href="https://arxiv.org/abs/2306.05685">link</a>
+          </li>
+          <li id="ref-gu2024">
+            <span class="ref-key">Gu et al., 2024</span>
+            Gu, J., et al. (2024). A Survey on LLM-as-a-Judge. <em>arXiv:2411.15594</em>. <a href="https://arxiv.org/abs/2411.15594">link</a>
+          </li>
+          <li id="ref-chochlakis2025">
+            <span class="ref-key">Chochlakis et al., 2025</span>
+            Chochlakis, G., et al. (2025). Aggregation Artifacts in Subjective Tasks Collapse Large Language Models' Posteriors. <em>NAACL</em>. <a href="https://arxiv.org/abs/2410.13776">link</a>
+          </li>
+          <li id="ref-baan2022">
+            <span class="ref-key">Baan et al., 2022</span>
+            Baan, J., et al. (2022). Stop Measuring Calibration When Humans Disagree. <em>EMNLP</em>. <a href="https://arxiv.org/abs/2210.16133">link</a>
+          </li>
+          <li id="ref-li2025a">
+            <span class="ref-key">Li et al., 2025a</span>
+            Li, Z., Schuurmans, D., Dai, B., &amp; Palangi, H. (2025). Judging with Confidence: Calibrating Autoraters to Preference Distributions. <em>arXiv:2510.00263</em>. <a href="https://arxiv.org/abs/2510.00263">link</a>
+          </li>
+          <li id="ref-lambert2024">
+            <span class="ref-key">Lambert et al., 2024</span>
+            Lambert, N., et al. (2024). Tülu 3: Pushing Frontiers in Open Language Model Post-Training. <em>arXiv:2411.15124</em>. <a href="https://arxiv.org/abs/2411.15124">link</a>
+          </li>
+          <li id="ref-deepseek2025">
+            <span class="ref-key">DeepSeek-AI, 2025</span>
+            DeepSeek-AI (Guo, D., et al.). (2025). DeepSeek-R1: Incentivizing Reasoning Capability in LLMs via Reinforcement Learning. <em>Nature, 645</em>, 633–638 (arXiv:2501.12948). <a href="https://arxiv.org/abs/2501.12948">link</a>
+          </li>
+          <li id="ref-wang2024">
+            <span class="ref-key">Wang et al., 2024</span>
+            Wang, W., et al. (2024). Learning to Ask: When LLM Agents Meet Unclear Instruction. <em>arXiv:2409.00557</em>. <a href="https://arxiv.org/abs/2409.00557">link</a>
+          </li>
+          <li id="ref-li2025b">
+            <span class="ref-key">Li et al., 2025b</span>
+            Li, B. Z., Kim, J., &amp; Wang, R. (2025). QuestBench: Can LLMs Ask the Right Question to Acquire Information in Reasoning Tasks? <em>NeurIPS Datasets and Benchmarks</em> (arXiv:2503.22674). <a href="https://arxiv.org/abs/2503.22674">link</a>
+          </li>
+          <li id="ref-ni2026">
+            <span class="ref-key">Ni et al., 2026</span>
+            Ni, J., Fan, Y., et al. (2026). Can Reasoning Help Large Language Models Capture Human Annotator Disagreement? <em>EACL</em>. <a href="https://arxiv.org/abs/2506.19467">link</a>
+          </li>
+          <li id="ref-plank2022">
+            <span class="ref-key">Plank, 2022</span>
+            Plank, B. (2022). The "Problem" of Human Label Variation: On Ground Truth in Data, Modeling and Evaluation. <em>EMNLP</em>. <a href="https://arxiv.org/abs/2211.02570">link</a>
+          </li>
+          <li id="ref-uma2021">
+            <span class="ref-key">Uma et al., 2021</span>
+            Uma, A., et al. (2021). Learning from Disagreement: A Survey. <em>Journal of Artificial Intelligence Research, 72</em>, 1385–1470. <a href="https://www.jair.org/index.php/jair/article/view/12752">link</a>
+          </li>
+          <li id="ref-xu2025">
+            <span class="ref-key">Xu et al., 2025</span>
+            Xu, M., Santosh, T. Y. S. S., &amp; Plank, B. (2025). From Noise to Signal to Selbstzweck: Reframing Human Label Variation in the Era of Post-training in NLP. <em>arXiv:2510.12817</em>. <a href="https://arxiv.org/abs/2510.12817">link</a>
+          </li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <p>Jingwei Ni · Trustworthy AI Research</p>
+      <div class="footer-links">
+        <a href="https://scholar.google.com/citations?hl=en&user=y7A_izwAAAAJ">Google Scholar</a>
+        <a href="https://twitter.com/NJingwei">Twitter</a>
+        <a href="https://www.linkedin.com/in/jingwei-ni-8a9293152">LinkedIn</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.documentElement.classList.add('js');
+    (function () {
+      var reduce = window.matchMedia('(prefers-reduced-motion: reduce)');
+      if (reduce.matches) {
+        document.querySelectorAll('[data-reveal]').forEach(function (el) { el.classList.add('in'); });
+        return;
+      }
+      if (!('IntersectionObserver' in window)) {
+        document.querySelectorAll('[data-reveal]').forEach(function (el) { el.classList.add('in'); });
+        return;
+      }
+      var io = new IntersectionObserver(function (entries) {
+        entries.forEach(function (e) {
+          if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
+        });
+      }, { threshold: 0.12, rootMargin: '0px 0px -8% 0px' });
+      document.querySelectorAll('[data-reveal]').forEach(function (el) { io.observe(el); });
+    })();
+  </script>
+</body>
+</html>

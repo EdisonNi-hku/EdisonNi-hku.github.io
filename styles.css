@@ -525,15 +525,6 @@ h1 {
 
 .focus-grid > .focus-card { flex: 1 1 0; min-width: 0; }
 
-.focus-arrow {
-  flex: 0 0 auto;
-  align-self: center;
-  padding: 0 22px;
-  font-family: var(--mono);
-  font-size: 1.5rem;
-  color: var(--signal);
-}
-
 .focus-card,
 .project-card,
 .publication-card,
@@ -579,6 +570,19 @@ h1 {
 }
 
 .focus-card p { margin: 0; color: var(--body); }
+
+.focus-lead { max-width: 76ch; margin-bottom: clamp(26px, 4vw, 42px); }
+
+.focus-lead p {
+  margin: 0;
+  color: var(--ink-soft);
+  font-size: clamp(1.04rem, 1.6vw, 1.22rem);
+  line-height: 1.6;
+}
+
+.focus-grid.pair { gap: 18px; }
+
+.focus-cta { margin-top: clamp(24px, 3vw, 34px); }
 
 /* ---- projects & service ---------------------------------------------- */
 
@@ -839,6 +843,146 @@ h1 {
 .timeline-item h3 { margin: 0 0 6px; font-size: 1.25rem; line-height: 1.15; }
 .timeline-item p { margin: 0; color: var(--muted); }
 
+/* ---- research statement page ----------------------------------------- */
+
+.statement-hero {
+  position: relative;
+  padding: clamp(50px, 8vw, 104px) 0 clamp(28px, 4vw, 46px);
+  overflow: hidden;
+}
+
+.statement-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background:
+    radial-gradient(120% 90% at 88% -10%, var(--signal-soft) 0%, transparent 46%),
+    linear-gradient(180deg, var(--surface), transparent 42%);
+}
+
+.statement-title {
+  margin: 0 0 20px;
+  max-width: 18ch;
+  font-size: clamp(2.3rem, 6vw, 4.4rem);
+  line-height: 0.98;
+  letter-spacing: -0.025em;
+}
+
+.statement-lede {
+  max-width: 62ch;
+  margin: 0 0 22px;
+  color: var(--ink-soft);
+  font-size: clamp(1.06rem, 1.7vw, 1.28rem);
+  line-height: 1.55;
+}
+
+.statement-back a {
+  font-family: var(--mono);
+  font-size: 0.78rem;
+  letter-spacing: 0.02em;
+  text-decoration: none;
+}
+
+.statement-section {
+  padding: clamp(48px, 7vw, 96px) 0;
+  border-top: 1px solid var(--line);
+}
+
+.statement-section.alt { background: var(--surface); }
+
+.statement-body { max-width: 74ch; }
+
+.statement-body p {
+  margin: 0 0 1.2em;
+  color: var(--body);
+  font-size: 1.07rem;
+  line-height: 1.72;
+}
+
+.statement-body p:last-child { margin-bottom: 0; }
+.statement-body strong { color: var(--ink); }
+
+.argument-list { display: grid; gap: 16px; }
+
+.argument {
+  display: grid;
+  grid-template-columns: 50px minmax(0, 1fr);
+  gap: 18px;
+  padding: clamp(22px, 3vw, 32px);
+  border: 1px solid var(--line-strong);
+  border-radius: var(--radius);
+  background: var(--surface);
+}
+
+.statement-section.alt .argument { background: color-mix(in srgb, var(--surface) 60%, var(--paper)); }
+
+.argument-index {
+  font-family: var(--mono);
+  font-weight: 700;
+  font-size: 0.82rem;
+  color: var(--signal);
+  font-variant-numeric: tabular-nums;
+  padding-top: 0.18em;
+}
+
+.argument-text h3 {
+  margin: 0 0 10px;
+  font-size: clamp(1.16rem, 2vw, 1.45rem);
+  line-height: 1.16;
+}
+
+.argument-text p { margin: 0; color: var(--body); }
+
+.cite {
+  font-family: var(--mono);
+  font-size: 0.84em;
+  white-space: nowrap;
+  text-decoration: none;
+  color: var(--signal-ink);
+}
+
+.cite:hover,
+.cite:focus-visible { color: var(--trace); }
+
+.reference-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 12px;
+  max-width: 92ch;
+}
+
+.reference-list li {
+  padding: 14px 18px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: color-mix(in srgb, var(--surface) 70%, transparent);
+  color: var(--body);
+  font-size: 0.92rem;
+  line-height: 1.55;
+  scroll-margin-top: 96px;
+  transition: border-color 0.18s ease, background 0.18s ease;
+}
+
+.reference-list li:target {
+  border-color: var(--signal);
+  background: var(--signal-soft);
+}
+
+.reference-list li em { color: var(--ink-soft); font-style: italic; }
+
+.ref-key {
+  display: block;
+  margin-bottom: 4px;
+  font-family: var(--mono);
+  font-size: 0.74rem;
+  letter-spacing: 0.02em;
+  color: var(--signal-ink);
+}
+
 /* ---- footer ----------------------------------------------------------- */
 
 .site-footer {
@@ -894,7 +1038,6 @@ h1 {
   .featured-paper { grid-template-columns: 1fr; }
 
   .focus-grid { flex-direction: column; }
-  .focus-arrow { transform: rotate(90deg); padding: 14px 0; }
 
   .featured-meta { flex-direction: row; align-items: center; text-align: left; }
 }
@@ -928,6 +1071,9 @@ h1 {
   }
 
   .publication-index { font-size: 0.74rem; }
+
+  .argument { grid-template-columns: 1fr; gap: 8px; }
+  .argument-index { padding-top: 0; }
 
   .footer-grid { flex-direction: column; align-items: flex-start; }
 }

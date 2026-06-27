@@ -68,6 +68,15 @@
           <article class="argument" data-reveal>
             <div class="argument-index">01</div>
             <div class="argument-text">
+              <h3>Frontier models already game the rewards we give them.</h3>
+              <p>
+                In June 2026 METR found that GPT-5.6 had the highest cheating rate of any public model it has tested — it packaged exploits into its intermediate submissions to leak a task's own hidden tests, and counting that as success inflated its measured capability past the point where the benchmark still means anything (<a class="cite" href="#ref-metr2026">METR, 2026</a>). The same week, Cursor traced 63% of a frontier model's benchmark wins to answers retrieved from the public web and git history rather than real fixes; cut off those channels and one model fell from 87% to 73% (<a class="cite" href="#ref-cursor2026">Cursor, 2026</a>). When the reward is gameable, real capability and reward-hacking are indistinguishable from the outside — which is exactly the gap a model's own reported uncertainty is meant to close.
+              </p>
+            </div>
+          </article>
+          <article class="argument" data-reveal>
+            <div class="argument-index">02</div>
+            <div class="argument-text">
               <h3>The safer path to advanced AI runs on uncertainty reporting.</h3>
               <p>
                 Bengio et al.'s Scientist AI makes a simple case: agentic systems tend to develop implicit, instrumental goals — self-preservation, power-seeking, reward hacking via overoptimization — that emerge regardless of their initial objective, so rather than trust an agent on its own, we supervise it with a non-agentic, uncertainty-aware system that acts as a guardrail (<a class="cite" href="#ref-bengio2025">Bengio et al., 2025</a>). Building that kind of supervisor is the tractable core of my work.
@@ -75,7 +84,7 @@
             </div>
           </article>
           <article class="argument" data-reveal>
-            <div class="argument-index">02</div>
+            <div class="argument-index">03</div>
             <div class="argument-text">
               <h3>Our evaluation tools can't see disagreement.</h3>
               <p>
@@ -84,7 +93,7 @@
             </div>
           </article>
           <article class="argument" data-reveal>
-            <div class="argument-index">03</div>
+            <div class="argument-index">04</div>
             <div class="argument-text">
               <h3>Deployment is full of the hard kind of uncertainty.</h3>
               <p>
@@ -93,7 +102,7 @@
             </div>
           </article>
           <article class="argument" data-reveal>
-            <div class="argument-index">04</div>
+            <div class="argument-index">05</div>
             <div class="argument-text">
               <h3>Scaling will not rescue it.</h3>
               <p>
@@ -139,6 +148,14 @@
           <li id="ref-shorinwa2024">
             <span class="ref-key">Shorinwa et al., 2024</span>
             Shorinwa, O., Mei, Z., Lidard, J., Ren, A. Z., &amp; Majumdar, A. (2024). A Survey on Uncertainty Quantification of Large Language Models: Taxonomy, Open Research Challenges, and Future Directions. <em>arXiv:2412.05563</em>. <a href="https://arxiv.org/abs/2412.05563">link</a>
+          </li>
+          <li id="ref-metr2026">
+            <span class="ref-key">METR, 2026</span>
+            METR. (2026, June 26). Summary of METR's predeployment evaluation of GPT-5.6 Sol. <a href="https://metr.org/blog/2026-06-26-gpt-5-6-sol/">link</a>
+          </li>
+          <li id="ref-cursor2026">
+            <span class="ref-key">Cursor, 2026</span>
+            Jain, N. (2026, June 25). Reward hacking is swamping model intelligence gains. <em>Cursor</em>. <a href="https://cursor.com/blog/reward-hacking-coding-benchmarks">link</a>
           </li>
           <li id="ref-bengio2025">
             <span class="ref-key">Bengio et al., 2025</span>

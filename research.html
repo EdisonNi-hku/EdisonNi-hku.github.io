@@ -48,11 +48,11 @@
       <div class="container">
         <div class="section-heading" data-reveal>
           <p class="readout">Topic</p>
-          <h2 class="section-title">One reporting ability, behind everything.</h2>
+          <h2 class="section-title">Surfacing a model's own uncertainty.</h2>
         </div>
         <div class="statement-body" data-reveal>
           <p>
-            I build AI systems that know when to be trusted: I extract the uncertainty a model already carries and expose it for human supervision. One requirement sits behind everything I do — a trustworthy model should report low confidence whenever it is likely to be wrong, whatever the cause — and that single reporting ability is what makes human oversight possible. Uncertainty here comes in two flavors, epistemic (what the model doesn't know) and aleatoric (irreducible ambiguity in the world) (<a class="cite" href="#ref-huellermeier2021">Hüllermeier &amp; Waegeman, 2021</a>; <a class="cite" href="#ref-shorinwa2024">Shorinwa et al., 2024</a>); what matters for trust is that the model reports either one.
+            I build AI systems that know when to be trusted: I extract the uncertainty a model already carries and expose it for human supervision. A trustworthy model should report low confidence whenever it is likely to be wrong, whatever the cause — and that ability to report its own unreliability is what makes human oversight possible. The uncertainty itself has two sources, epistemic (what the model doesn't know) and aleatoric (irreducible ambiguity in the world) (<a class="cite" href="#ref-huellermeier2021">Hüllermeier &amp; Waegeman, 2021</a>; <a class="cite" href="#ref-shorinwa2024">Shorinwa et al., 2024</a>); for oversight, what matters is that the model reports it.
           </p>
         </div>
       </div>
@@ -109,17 +109,17 @@
       <div class="container">
         <div class="section-heading" data-reveal>
           <p class="readout">My research</p>
-          <h2 class="section-title">One goal, measured one way.</h2>
+          <h2 class="section-title">From checkable signals to contested labels.</h2>
         </div>
         <div class="statement-body" data-reveal>
           <p>
-            A trustworthy model should signal its own unreliability, so I evaluate every method with the same source-agnostic tools — calibration and selective-prediction AUROC — which test whether reported confidence tracks actual errors, not which kind of uncertainty caused them.
+            What I build differs from setting to setting; how I judge it does not. I evaluate every method with calibration and selective-prediction AUROC, which test whether a model's reported confidence tracks its actual errors. What changes across settings is how tractable the problem is, and that turns on whether the uncertainty is objectively checkable.
           </p>
           <p>
-            What changes is how tractable the problem is, and that turns on whether the uncertainty is objectively checkable. Where it is — verifying a math reasoning step, judging whether retrieved evidence is relevant — labels are cheap, models are strong, and uncertainty can be trained and rigorously tested. One favorite paper of my own, <a href="https://arxiv.org/abs/2511.06209">ReProbe</a>, lives here: it reads a model's own internal states mid-reasoning to tell when an answer has settled, scaling test-time compute only as far as needed, with indisputable gold evaluation and extensive out-of-distribution tests. It is exactly the kind of non-agentic, uncertainty-reporting verifier that Scientist AI calls for.
+            Where it is checkable — verifying a math reasoning step, judging whether retrieved evidence is relevant — labels are cheap, models are strong, and uncertainty can be trained and rigorously tested. One favorite paper of my own, <a href="https://arxiv.org/abs/2511.06209">ReProbe</a>, lives here: it reads a model's own internal states mid-reasoning to tell when an answer has settled, scaling test-time compute only as far as needed, with indisputable gold evaluation and extensive out-of-distribution tests. It is exactly the kind of non-agentic, uncertainty-reporting verifier that Scientist AI calls for.
           </p>
           <p>
-            The same reporting goal extends to far less tractable terrain — subjective classification and conflicting human labels, long argued to be signal rather than noise (<a class="cite" href="#ref-plank2022">Plank, 2022</a>; <a class="cite" href="#ref-uma2021">Uma et al., 2021</a>; <a class="cite" href="#ref-xu2025">Xu et al., 2025</a>) — where I build uncertainty-aware classifiers distilled into cheap, deployable models (<a href="https://arxiv.org/abs/2402.11073">AFaCTA</a>, <a href="https://arxiv.org/abs/2406.14162">DIRAS</a>), evidence-grounded specialists whose every claim is traceable to its source (<a href="https://arxiv.org/abs/2402.08277">Evidence-Based QA</a>), and interfaces that surface the edge cases a classifier quietly gets wrong so people adjudicate the contested ones (<a href="https://arxiv.org/abs/2507.05010">Co-DETECT</a>). Here the gold signal is a distribution of disagreeing human labels — scarce, costly, and far from mainstream benchmarks — so even evaluation is an open problem. That gap is itself a central finding: because this uncertainty cannot be cheaply scored, it never enters the reward, and models are never trained to handle it.
+            At the other end lies far less tractable terrain — subjective classification and conflicting human labels, long argued to be signal rather than noise (<a class="cite" href="#ref-plank2022">Plank, 2022</a>; <a class="cite" href="#ref-uma2021">Uma et al., 2021</a>; <a class="cite" href="#ref-xu2025">Xu et al., 2025</a>) — where I build uncertainty-aware classifiers distilled into cheap, deployable models (<a href="https://arxiv.org/abs/2402.11073">AFaCTA</a>, <a href="https://arxiv.org/abs/2406.14162">DIRAS</a>), evidence-grounded specialists whose every claim is traceable to its source (<a href="https://arxiv.org/abs/2402.08277">Evidence-Based QA</a>), and interfaces that surface the edge cases a classifier quietly gets wrong so people adjudicate the contested ones (<a href="https://arxiv.org/abs/2507.05010">Co-DETECT</a>). Here the gold signal is a distribution of disagreeing human labels — scarce, costly, and far from mainstream benchmarks — so even evaluation is an open problem. That gap is itself a central finding: because this uncertainty cannot be cheaply scored, it never enters the reward, and models are never trained to handle it.
           </p>
         </div>
       </div>

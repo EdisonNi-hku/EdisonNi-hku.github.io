@@ -979,6 +979,7 @@ h1 {
 /* ---- footer ----------------------------------------------------------- */
 
 .site-footer {
+  position: relative;
   padding: 32px 0;
   border-top: 1px solid var(--ink);
   background: var(--ink);
@@ -997,6 +998,61 @@ h1 {
 .footer-links { gap: 8px 22px; }
 .footer-links a { color: #aeb7ff; font-family: var(--mono); font-size: 0.78rem; }
 .footer-links a:hover { color: #fff; }
+
+/* ---- footer easter egg (a quiet little pig) --------------------------- */
+
+.footer-pig {
+  position: absolute;
+  right: 16px;
+  bottom: 9px;
+  width: 26px;
+  height: 26px;
+  color: #d7d9de;
+  opacity: 0.14;
+  transition: opacity 0.4s ease, color 0.4s ease, transform 0.4s ease;
+}
+
+.footer-pig svg { width: 100%; height: 100%; display: block; }
+
+.footer-pig:hover {
+  opacity: 0.9;
+  color: #ffb7cb;
+}
+
+.pig-oink {
+  position: absolute;
+  left: 50%;
+  bottom: 100%;
+  margin-bottom: 8px;
+  padding: 2px 7px;
+  border-radius: 9px;
+  background: #ffb7cb;
+  color: #16181d;
+  font-family: var(--mono);
+  font-size: 0.62rem;
+  letter-spacing: 0.04em;
+  white-space: nowrap;
+  opacity: 0;
+  transform: translateX(-50%) translateY(4px) scale(0.9);
+  transform-origin: bottom center;
+  transition: opacity 0.25s ease, transform 0.25s ease;
+  pointer-events: none;
+}
+
+.footer-pig:hover .pig-oink {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0) scale(1);
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .footer-pig:hover svg { animation: pig-wiggle 0.5s ease; }
+}
+
+@keyframes pig-wiggle {
+  0%, 100% { transform: rotate(0); }
+  25% { transform: rotate(-9deg); }
+  75% { transform: rotate(9deg); }
+}
 
 /* ---- scroll reveal ---------------------------------------------------- */
 

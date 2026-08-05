@@ -980,12 +980,12 @@ h1 {
 .footer-links a { color: #aeb7ff; font-family: var(--mono); font-size: 0.78rem; }
 .footer-links a:hover { color: #fff; }
 
-/* ---- footer easter egg (a quiet little pig) --------------------------- */
+/* ---- footer easter egg (a quiet little pig, and a cat above it) -------- */
 
-.footer-pig {
+.footer-pig,
+.footer-cat {
   position: fixed;
   right: 16px;
-  bottom: 14px;
   z-index: 40;
   width: 26px;
   height: 26px;
@@ -994,18 +994,24 @@ h1 {
   transition: opacity 0.4s ease, color 0.4s ease, transform 0.4s ease;
 }
 
-.footer-pig svg { width: 100%; height: 100%; display: block; }
+.footer-pig { bottom: 14px; }
+.footer-cat { bottom: 46px; }
 
-.footer-pig:hover {
-  opacity: 0.92;
-  color: #e0608a;
-}
+.footer-pig svg,
+.footer-cat svg { width: 100%; height: 100%; display: block; }
 
-.pig-oink {
+.footer-pig:hover,
+.footer-cat:hover { opacity: 0.92; }
+
+.footer-pig:hover { color: #e0608a; }
+.footer-cat:hover { color: #d9a05c; }
+
+.pig-oink,
+.cat-meow {
   position: absolute;
-  left: 50%;
-  bottom: 100%;
-  margin-bottom: 8px;
+  right: 100%;
+  top: 50%;
+  margin-right: 8px;
   padding: 2px 7px;
   border-radius: 9px;
   background: #ffb7cb;
@@ -1015,25 +1021,35 @@ h1 {
   letter-spacing: 0.04em;
   white-space: nowrap;
   opacity: 0;
-  transform: translateX(-50%) translateY(4px) scale(0.9);
-  transform-origin: bottom center;
+  transform: translateY(-50%) translateX(4px) scale(0.9);
+  transform-origin: right center;
   transition: opacity 0.25s ease, transform 0.25s ease;
   pointer-events: none;
 }
 
-.footer-pig:hover .pig-oink {
+.cat-meow { background: #f3cf9a; }
+
+.footer-pig:hover .pig-oink,
+.footer-cat:hover .cat-meow {
   opacity: 1;
-  transform: translateX(-50%) translateY(0) scale(1);
+  transform: translateY(-50%) translateX(0) scale(1);
 }
 
 @media (prefers-reduced-motion: no-preference) {
   .footer-pig:hover svg { animation: pig-wiggle 0.5s ease; }
+  .footer-cat:hover svg { animation: cat-tilt 0.6s ease; }
 }
 
 @keyframes pig-wiggle {
   0%, 100% { transform: rotate(0); }
   25% { transform: rotate(-9deg); }
   75% { transform: rotate(9deg); }
+}
+
+@keyframes cat-tilt {
+  0%, 100% { transform: rotate(0); }
+  40% { transform: rotate(-12deg); }
+  70% { transform: rotate(5deg); }
 }
 
 /* ---- scroll reveal ---------------------------------------------------- */

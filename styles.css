@@ -995,7 +995,7 @@ h1 {
 }
 
 .footer-pig { bottom: 14px; }
-.footer-cat { bottom: 46px; }
+.footer-cat { bottom: 32px; }
 
 .footer-pig svg,
 .footer-cat svg { width: 100%; height: 100%; display: block; }

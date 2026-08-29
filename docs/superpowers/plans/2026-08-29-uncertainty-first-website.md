@@ -6,7 +6,7 @@
 
 **Architecture:** Keep the existing static HTML and CSS architecture. Edit `index.html` for the homepage narrative, selected work, mentorship, and full publication list; edit `research.html` for the longer two-use research argument. Reuse existing components and classes, adding no CSS unless browser verification exposes a concrete layout failure.
 
-**Tech Stack:** Static HTML5, existing `styles.css` and `script.js`, shell assertions, Playwright CLI screenshots.
+**Tech Stack:** Static HTML5, existing `styles.css` and inline reveal scripts, shell assertions, Playwright CLI screenshots.
 
 ---
 
@@ -504,7 +504,7 @@ Expected: every command exits 0.
 Run:
 
 ```bash
-for target in styles.css script.js photo.jpg teasing.png research.html index.html; do test -e "$target"; done
+for target in styles.css photo.jpg teasing.png research.html index.html; do test -e "$target"; done
 ```
 
 Expected: every local target exists.

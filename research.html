@@ -38,7 +38,7 @@
         </p>
         <h1 class="statement-title">AI systems that know when to be trusted.</h1>
         <p class="statement-lede">
-          I extract the uncertainty a model already carries and expose it for human supervision — because a model that reliably reports when it is likely to be wrong is what makes oversight possible.
+          I quantify the uncertainty a model already carries and use it to guide human supervision and adaptive test-time reasoning.
         </p>
         <p class="statement-back"><a href="index.html">← Back to homepage</a></p>
       </div>
@@ -48,11 +48,83 @@
       <div class="container">
         <div class="section-heading" data-reveal>
           <p class="readout">Topic</p>
-          <h2 class="section-title">Surfacing a model's own uncertainty.</h2>
+          <h2 class="section-title">Making uncertainty actionable.</h2>
         </div>
         <div class="statement-body" data-reveal>
           <p>
-            I build AI systems that know when to be trusted: I extract the uncertainty a model already carries and expose it for human supervision. A trustworthy model should report low confidence whenever it is likely to be wrong, whatever the cause — and that ability to report its own unreliability is what makes human oversight possible. The uncertainty itself has two sources, epistemic (what the model doesn't know) and aleatoric (irreducible ambiguity in the world) (<a class="cite" href="#ref-huellermeier2021">Hüllermeier &amp; Waegeman, 2021</a>; <a class="cite" href="#ref-shorinwa2024">Shorinwa et al., 2024</a>); for oversight, what matters is that the model reports it.
+            My research uses uncertainty quantification for two purposes: deciding when a model can be trusted and guiding how it should reason at test time. A trustworthy model should report low confidence whenever it is likely to be wrong. The uncertainty itself has two sources, epistemic uncertainty about what the model does not know and aleatoric uncertainty arising from irreducible ambiguity in the world (<a class="cite" href="#ref-huellermeier2021">Hüllermeier &amp; Waegeman, 2021</a>; <a class="cite" href="#ref-shorinwa2024">Shorinwa et al., 2024</a>).
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <div class="container focus-block">
+      <div class="focus-grid pair">
+        <article class="focus-card" data-reveal>
+          <span class="focus-tag">Use 01 · Improving reliability</span>
+          <h3>Know when a model can be trusted.</h3>
+          <p>After calibration, uncertainty estimates can support selective prediction, surface difficult cases for human supervision, and determine when a system should answer, abstain, or defer.</p>
+          <a class="card-link" href="#reliability">Why reliability needs uncertainty →</a>
+        </article>
+        <article class="focus-card accent" data-reveal>
+          <span class="focus-tag">Use 02 · Enhancing capability</span>
+          <h3>Guide how a model reasons at test time.</h3>
+          <p>Model-internal uncertainty can provide a low-cost self-assessment signal for deciding when to continue reasoning, explore another path, or stop.</p>
+          <a class="card-link" href="#capability">Why capability needs uncertainty →</a>
+        </article>
+      </div>
+    </div>
+
+    <section class="statement-section alt" id="reliability">
+      <div class="container">
+        <div class="section-heading" data-reveal>
+          <p class="readout">Use 01 · Improving reliability</p>
+          <h2 class="section-title">Know when a model can be trusted.</h2>
+        </div>
+        <div class="argument-list">
+          <article class="argument" data-reveal>
+            <div class="argument-index">01</div>
+            <div class="argument-text">
+              <h3>Uncertainty reporting enables oversight.</h3>
+              <p>
+                External rewards can mistake reward gaming for real capability. METR found that a frontier model exploited hidden tests, while Cursor traced many benchmark wins to answers retrieved from public sources rather than genuine fixes (<a class="cite" href="#ref-metr2026">METR, 2026</a>; <a class="cite" href="#ref-cursor2026">Cursor, 2026</a>). Bengio et al.'s Scientist AI argues for supervising agentic systems with non-agentic, uncertainty-aware guardrails (<a class="cite" href="#ref-bengio2025">Bengio et al., 2025</a>). When an external score cannot distinguish genuine capability from reward gaming, reported uncertainty provides a complementary signal for deciding which cases require oversight.
+              </p>
+            </div>
+          </article>
+          <article class="argument" data-reveal>
+            <div class="argument-index">02</div>
+            <div class="argument-text">
+              <h3>Existing evaluation misses disagreement and underspecified criteria.</h3>
+              <p>
+                The field ranks, filters, and aligns models with LLM judges (<a class="cite" href="#ref-zheng2023">Zheng et al., 2023</a>; <a class="cite" href="#ref-gu2024">Gu et al., 2024</a>), but criteria such as helpfulness, harm, and novelty are contested across legitimate viewpoints. A judge commits to one reading and returns a single score, leaving evaluation most miscalibrated where humans disagree (<a class="cite" href="#ref-chochlakis2025">Chochlakis et al., 2025</a>; <a class="cite" href="#ref-baan2022">Baan et al., 2022</a>; <a class="cite" href="#ref-li2025a">Li et al., 2025a</a>). Real instructions are also underspecified, so models often invent missing details and act instead of asking (<a class="cite" href="#ref-wang2024">Wang et al., 2024</a>; <a class="cite" href="#ref-li2025b">Li et al., 2025b</a>). These cases require uncertainty to be surfaced rather than collapsed into a confident decision.
+              </p>
+            </div>
+          </article>
+          <article class="argument" data-reveal>
+            <div class="argument-index">03</div>
+            <div class="argument-text">
+              <h3>More scaling cannot resolve irreducible uncertainty.</h3>
+              <p>
+                When uncertainty comes from genuine ambiguity or conflicting human judgments, more compute on the same input cannot resolve it. My own work shows that making models reason longer can actively harm their ability to represent human disagreement (<a class="cite" href="#ref-ni2026">Ni et al., 2026</a>). Reliable systems must recognize when additional inference is useful and when the unresolved uncertainty should instead be exposed to people.
+              </p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="statement-section" id="capability">
+      <div class="container">
+        <div class="section-heading" data-reveal>
+          <p class="readout">Use 02 · Enhancing capability</p>
+          <h2 class="section-title">Guide how a model reasons at test time.</h2>
+        </div>
+        <div class="statement-body" data-reveal>
+          <p>
+            Effective test-time scaling needs feedback on whether the current reasoning is reliable, so it can decide whether further inference is worth the cost. Model-internal uncertainty can provide this self-assessment without repeatedly querying a separate evaluator.
+          </p>
+          <p>
+            Programmatic verifiers provide definitive feedback when criteria are explicit and cheap to check, which has made them powerful for reinforcement learning and test-time improvement in domains such as mathematics and code (<a class="cite" href="#ref-lambert2024">Lambert et al., 2024</a>; <a class="cite" href="#ref-deepseek2025">DeepSeek-AI, 2025</a>). Their coverage ends when objectives cannot be completely formalized. LLM judges extend evaluation to qualitative criteria (<a class="cite" href="#ref-zheng2023">Zheng et al., 2023</a>; <a class="cite" href="#ref-gu2024">Gu et al., 2024</a>), but repeated calls add test-time cost and latency and remain tied to a chosen rubric. UQ complements these external signals with a model-native test-time signal for deciding when to continue reasoning, explore another path, or stop.
           </p>
         </div>
       </div>
@@ -61,74 +133,15 @@
     <section class="statement-section alt">
       <div class="container">
         <div class="section-heading" data-reveal>
-          <p class="readout">Why this matters now</p>
-          <h2 class="section-title">Uncertainty reporting is the bottleneck.</h2>
-        </div>
-        <div class="argument-list">
-          <article class="argument" data-reveal>
-            <div class="argument-index">01</div>
-            <div class="argument-text">
-              <h3>Frontier models already game the rewards we give them.</h3>
-              <p>
-                In June 2026 METR found that GPT-5.6 had the highest cheating rate of any public model it has tested — it packaged exploits into its intermediate submissions to leak a task's own hidden tests, and counting that as success inflated its measured capability past the point where the benchmark still means anything (<a class="cite" href="#ref-metr2026">METR, 2026</a>). The same week, Cursor traced 63% of a frontier model's benchmark wins to answers retrieved from the public web and git history rather than real fixes; cut off those channels and one model fell from 87% to 73% (<a class="cite" href="#ref-cursor2026">Cursor, 2026</a>). When the reward is gameable, real capability and reward-hacking are indistinguishable from the outside — which is exactly the gap a model's own reported uncertainty is meant to close.
-              </p>
-            </div>
-          </article>
-          <article class="argument" data-reveal>
-            <div class="argument-index">02</div>
-            <div class="argument-text">
-              <h3>The safer path to advanced AI runs on uncertainty reporting.</h3>
-              <p>
-                Bengio et al.'s Scientist AI makes a simple case: agentic systems tend to develop implicit, instrumental goals — self-preservation, power-seeking, reward hacking via overoptimization — that emerge regardless of their initial objective, so rather than trust an agent on its own, we supervise it with a non-agentic, uncertainty-aware system that acts as a guardrail (<a class="cite" href="#ref-bengio2025">Bengio et al., 2025</a>). Building that kind of supervisor is the tractable core of my work.
-              </p>
-            </div>
-          </article>
-          <article class="argument" data-reveal>
-            <div class="argument-index">03</div>
-            <div class="argument-text">
-              <h3>Our evaluation tools can't see disagreement.</h3>
-              <p>
-                The field ranks, filters, and aligns models with LLM-as-a-judge (<a class="cite" href="#ref-zheng2023">Zheng et al., 2023</a>; <a class="cite" href="#ref-gu2024">Gu et al., 2024</a>), but "helpful," "harmful," and "novel" are contested across legitimate viewpoints, so a judge commits to one reading and returns a confident score — leaving leaderboards most miscalibrated exactly where humans most disagree (<a class="cite" href="#ref-chochlakis2025">Chochlakis et al., 2025</a>; <a class="cite" href="#ref-baan2022">Baan et al., 2022</a>; <a class="cite" href="#ref-li2025a">Li et al., 2025a</a>).
-              </p>
-            </div>
-          </article>
-          <article class="argument" data-reveal>
-            <div class="argument-index">04</div>
-            <div class="argument-text">
-              <h3>Deployment is full of the hard kind of uncertainty.</h3>
-              <p>
-                Real instructions are underspecified and real judgments are contested, yet agents are rewarded only for producing a heuristic-verifiable correct answer in math and code (<a class="cite" href="#ref-lambert2024">Lambert et al., 2024</a>; <a class="cite" href="#ref-deepseek2025">DeepSeek-AI, 2025</a>) — never for being uncertainty-aware — so they invent the missing detail and act instead of asking (<a class="cite" href="#ref-wang2024">Wang et al., 2024</a>; <a class="cite" href="#ref-li2025b">Li et al., 2025b</a>).
-              </p>
-            </div>
-          </article>
-          <article class="argument" data-reveal>
-            <div class="argument-index">05</div>
-            <div class="argument-text">
-              <h3>Scaling will not rescue it.</h3>
-              <p>
-                When uncertainty is irreducible, more compute on the same ambiguous input cannot resolve it — and my own work shows that making models reason longer actively harms their ability to represent human disagreement (<a class="cite" href="#ref-ni2026">Ni et al., 2026</a>).
-              </p>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="statement-section">
-      <div class="container">
-        <div class="section-heading" data-reveal>
           <p class="readout">My research</p>
-          <h2 class="section-title">From checkable signals to contested labels.</h2>
+          <h2 class="section-title">From uncertainty estimates to better decisions.</h2>
         </div>
         <div class="statement-body" data-reveal>
           <p>
-            What I build differs from setting to setting; how I judge it does not. I evaluate every method with calibration and selective-prediction AUROC, which test whether a model's reported confidence tracks its actual errors. What changes across settings is how tractable the problem is, and that turns on whether the uncertainty is objectively checkable.
+            <strong>For reliability,</strong> I study whether models can represent human disagreement rather than collapse it into one overconfident answer (<a href="https://arxiv.org/abs/2506.19467">Can Reasoning Help</a>). I build uncertainty-aware classifiers distilled into efficient, deployable models (<a href="https://arxiv.org/abs/2402.11073">AFaCTA</a>, <a href="https://arxiv.org/abs/2406.14162">DIRAS</a>), evidence-grounded specialists whose claims remain traceable to their sources (<a href="https://arxiv.org/abs/2402.08277">Evidence-Based QA</a>), and interfaces that surface model blind spots for human adjudication (<a href="https://arxiv.org/abs/2507.05010">Co-DETECT</a>). After calibration, the resulting uncertainty estimates support selective prediction and human supervision.
           </p>
           <p>
-            Where it is checkable — verifying a math reasoning step, judging whether retrieved evidence is relevant — labels are cheap, models are strong, and uncertainty can be trained and rigorously tested. One favorite paper of my own, <a href="https://arxiv.org/abs/2511.06209">ReProbe</a>, lives here: it reads a model's own internal states mid-reasoning to tell when an answer has settled, scaling test-time compute only as far as needed, with indisputable gold evaluation and extensive out-of-distribution tests. It is exactly the kind of non-agentic, uncertainty-reporting verifier that Scientist AI calls for.
-          </p>
-          <p>
-            At the other end lies far less tractable terrain — subjective classification and conflicting human labels, long argued to be signal rather than noise (<a class="cite" href="#ref-plank2022">Plank, 2022</a>; <a class="cite" href="#ref-uma2021">Uma et al., 2021</a>; <a class="cite" href="#ref-xu2025">Xu et al., 2025</a>) — where I build uncertainty-aware classifiers distilled into cheap, deployable models (<a href="https://arxiv.org/abs/2402.11073">AFaCTA</a>, <a href="https://arxiv.org/abs/2406.14162">DIRAS</a>), evidence-grounded specialists whose every claim is traceable to its source (<a href="https://arxiv.org/abs/2402.08277">Evidence-Based QA</a>), and interfaces that surface the edge cases a classifier quietly gets wrong so people adjudicate the contested ones (<a href="https://arxiv.org/abs/2507.05010">Co-DETECT</a>). Here the gold signal is a distribution of disagreeing human labels — scarce, costly, and far from mainstream benchmarks — so even evaluation is an open problem. That gap is itself a central finding: because this uncertainty cannot be cheaply scored, it never enters the reward, and models are never trained to handle it.
+            <strong>For capability,</strong> <a href="https://arxiv.org/abs/2511.06209">ReProbe</a> reads a model's internal states during multi-step reasoning to estimate whether its answer has settled. It uses this self-assessment signal to allocate test-time compute only where additional reasoning is useful, with gold evaluation and extensive out-of-distribution testing.
           </p>
         </div>
       </div>

@@ -1085,6 +1085,7 @@ h1 {
   .featured-paper { grid-template-columns: 1fr; }
 
   .focus-grid { flex-direction: column; }
+  .focus-grid > .focus-card { flex-basis: auto; }
 
   .featured-meta { flex-direction: row; align-items: center; text-align: left; }
 }

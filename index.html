@@ -33,13 +33,13 @@
       <div class="container hero-grid">
         <div class="hero-copy">
           <p class="readout hero-readout">
-            <span>Trustworthy AI · NLP</span>
+            <span>Uncertainty Quantification · NLP</span>
             <span aria-hidden="true" class="readout-div">/</span>
             <span>ETH Zürich × University of Zürich</span>
           </p>
           <h1>AI systems that know <span class="h1-accent">when to be trusted.</span></h1>
           <p class="hero-lede">
-            I am a PhD student mining the uncertainty hidden inside large language models and exposing it for human supervision.
+            I quantify the uncertainty a model already carries and use it to guide human supervision and adaptive test-time reasoning.
           </p>
 
           <figure class="hero-figure">
@@ -88,7 +88,7 @@
       <div class="container intro-grid">
         <div class="intro-head" data-reveal>
           <p class="readout">About · Research</p>
-          <h2 class="section-title">From a model's hidden uncertainty to human oversight.</h2>
+          <h2 class="section-title">Making uncertainty actionable.</h2>
         </div>
         <div class="prose" data-reveal>
           <p>
@@ -102,24 +102,24 @@
             I divide my time equally between both institutions.
           </p>
           <p>
-            I build AI systems that know when to be trusted: I extract the uncertainty a model already carries and expose it for human supervision. A trustworthy model should report low confidence whenever it is likely to be wrong — and that ability to flag its own unreliability is what makes oversight possible. What changes from setting to setting is how tractable the problem is, and that turns on whether the uncertainty is objectively checkable.
+            My research uses uncertainty quantification for two purposes: deciding when a model can be trusted and guiding how it should reason at test time.
           </p>
         </div>
       </div>
       <div class="container focus-block">
         <div class="focus-grid pair">
           <article class="focus-card" data-reveal>
-            <span class="focus-tag">Where the signal is checkable</span>
-            <h3>Verifiers that report confidence</h3>
+            <span class="focus-tag">Improving reliability</span>
+            <h3>Know when a model can be trusted.</h3>
             <p>
-              Verifying a math reasoning step, or whether retrieved evidence is relevant: labels are cheap, models are strong, and uncertainty can be trained and rigorously tested. Here I build non-agentic verifiers like ReProbe, which reads a model's internal states mid-reasoning to tell when an answer has settled.
+              A trustworthy model should report low confidence whenever it is likely to be wrong. I extract the uncertainty a model already carries and expose it for human supervision. After calibration, these estimates can support selective prediction and determine when a system should answer, abstain, or defer. This ability to flag its own unreliability is what makes oversight possible.
             </p>
           </article>
           <article class="focus-card accent" data-reveal>
-            <span class="focus-tag">Where the labels conflict</span>
-            <h3>Surfacing contested judgments</h3>
+            <span class="focus-tag">Enhancing capability</span>
+            <h3>Guide how a model reasons at test time.</h3>
             <p>
-              Subjective classification and conflicting human labels — signal, not noise. I build uncertainty-aware classifiers, evidence-grounded specialists whose every claim traces to its source, and interfaces that surface the edge cases people must adjudicate.
+              Effective test-time scaling needs feedback on whether the current reasoning is reliable, so it can decide whether further inference is worth the cost. Model-internal UQ can provide this self-assessment without repeatedly querying a separate evaluator. Programmatic verifiers provide definitive feedback when criteria are explicit and cheap to check, while LLM judges cover less formal criteria but add cost and latency and remain tied to a chosen rubric. UQ complements these external signals with a model-native test-time signal for deciding when to continue reasoning, explore another path, or stop.
             </p>
           </article>
         </div>

@@ -8,7 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=7">
+  <link rel="stylesheet" href="styles.css?v=9">
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
@@ -18,9 +18,9 @@
       <a class="brand-mark" href="#home" aria-label="Jingwei Ni homepage">
         <span>JN</span>
       </a>
-      <div class="nav-links">
+      <div class="nav-links" id="nav-links">
         <a href="#research">Research</a>
-        <a href="#events">Projects</a>
+        <a href="#events">Community</a>
         <a href="#publications">Publications</a>
         <a href="#education">Education</a>
         <a href="Ni_Jingwei_s_CV.pdf">CV</a>
@@ -107,17 +107,21 @@
         </div>
       </div>
       <div class="container focus-block">
-        <div class="focus-grid pair">
-          <article class="focus-card" data-reveal>
-            <span class="focus-tag">Improving reliability</span>
-            <h3>Know when a model can be trusted.</h3>
+        <div class="focus-list">
+          <article class="focus-row" data-reveal>
+            <div class="focus-row-head">
+              <span class="focus-tag">Improving reliability</span>
+              <h3>Know when a model can be trusted.</h3>
+            </div>
             <p>
               A trustworthy model should report low confidence whenever it is likely to be wrong. I extract the uncertainty a model already carries and expose it for human supervision. After calibration, these estimates can support selective prediction and determine when a system should answer, abstain, or defer. This ability to flag its own unreliability is what makes oversight possible.
             </p>
           </article>
-          <article class="focus-card accent" data-reveal>
-            <span class="focus-tag">Enhancing capability</span>
-            <h3>Guide how a model reasons at test time.</h3>
+          <article class="focus-row" data-reveal>
+            <div class="focus-row-head">
+              <span class="focus-tag">Enhancing capability</span>
+              <h3>Guide how a model reasons at test time.</h3>
+            </div>
             <p>
               Effective test-time scaling needs feedback on whether the current reasoning is reliable, so it can decide whether further inference is worth the cost. Model-internal UQ can provide this self-assessment without repeatedly querying a separate evaluator. Programmatic verifiers provide definitive feedback when criteria are explicit and cheap to check, while LLM judges cover less formal criteria but add cost and latency and remain tied to a chosen rubric. UQ complements these external signals with a model-native test-time signal for deciding when to continue reasoning, explore another path, or stop.
             </p>
@@ -132,39 +136,37 @@
     <section class="section-band service-band" id="events">
       <div class="container">
         <div class="section-heading" data-reveal>
-          <p class="readout">Projects &amp; community service</p>
-          <h2 class="section-title">Open models, climate NLP, and research communities.</h2>
+          <p class="readout">Projects · Talks · Service</p>
+          <h2 class="section-title">Community collaboration and services.</h2>
         </div>
         <div class="project-grid">
           <article class="project-card" data-reveal>
-            <p class="readout">Community collaboration</p>
+            <p class="readout">Collaboration</p>
             <h3>Apertus: Democratizing Open and Compliant LLMs</h3>
             <p>Community collaboration on democratizing open and compliant LLMs for global language environments, with contributions to trustworthiness post-training.</p>
             <a class="card-link" href="https://arxiv.org/abs/2509.14233">Technical report →</a>
           </article>
           <article class="project-card" data-reveal>
-            <p class="readout">Community collaboration</p>
+            <p class="readout">Collaboration</p>
             <h3>When AI Benchmarks Plateau</h3>
             <p>Community collaboration accepted to ICML 2026 on benchmark saturation and how plateauing scores affect evaluation practice.</p>
             <a class="card-link" href="https://arxiv.org/abs/2602.16763">ICML 2026 →</a>
           </article>
           <article class="project-card" data-reveal>
             <p class="readout">Workshop</p>
-            <h3>ClimateNLP at ACL 2025</h3>
-            <p>Organizing the second ClimateNLP workshop at ACL 2025, Vienna.</p>
+            <h3>ClimateNLP 2024 / 2025 / 2026</h3>
+            <p>Co-organizing the ClimateNLP workshop series: ACL 2024 in Bangkok, ACL 2025 in Vienna, and EMNLP 2026 in Budapest.</p>
             <div class="inline-links">
-              <a href="https://aclanthology.org/2025.climatenlp-1.0/">Proceedings</a>
               <a href="https://nlp4climate.github.io/">Workshop site</a>
+              <a href="https://aclanthology.org/2025.climatenlp-1.0/">2025 proceedings</a>
+              <a href="https://aclanthology.org/volumes/2024.climatenlp-1/">2024 proceedings</a>
             </div>
           </article>
           <article class="project-card" data-reveal>
-            <p class="readout">Workshop</p>
-            <h3>ClimateNLP at ACL 2024</h3>
-            <p>Organized the first ClimateNLP workshop at ACL 2024, Bangkok.</p>
-            <div class="inline-links">
-              <a href="https://aclanthology.org/volumes/2024.climatenlp-1/">Proceedings</a>
-              <a href="https://nlp4climate.github.io/climatenlp2024/">Workshop site</a>
-            </div>
+            <p class="readout">Invited Talk</p>
+            <h3>Keynote at the AI4Law Workshop, ICML 2026</h3>
+            <p>Keynote speech at the AI4Law workshop at ICML 2026 on uncertainty-aware LLM reasoning for legal tasks.</p>
+            <a class="card-link" href="https://docs.google.com/presentation/d/1WpaqRjF8Xk1G9WveniChFXJf1kFNK6wZ/edit?usp=sharing&amp;ouid=112178803057578273515&amp;rtpof=true&amp;sd=true">Slides →</a>
           </article>
         </div>
       </div>
@@ -183,7 +185,7 @@
         <div class="selected-grid">
           <article class="publication-card" data-reveal>
             <div class="publication-meta">
-              <span class="pub-year">2025</span>
+              <span class="pub-year">2026</span>
               <span class="tag tag-oral">ACL 2026 Oral</span>
             </div>
             <h3><a href="https://arxiv.org/abs/2511.06209">ReProbe: Efficient Test-Time Scaling of Multi-Step Reasoning by Probing Internal States of Large Language Models</a></h3>
@@ -201,7 +203,7 @@
           </article>
           <article class="publication-card" data-reveal>
             <div class="publication-meta">
-              <span class="pub-year">2025</span>
+              <span class="pub-year">2026</span>
               <span class="tag tag-oral">EACL 2026 Oral</span>
             </div>
             <h3><a href="https://arxiv.org/abs/2506.19467">Can Reasoning Help Large Language Models Capture Human Annotator Disagreement?</a></h3>
@@ -293,7 +295,7 @@
                   <span class="pub-year">2026</span>
                   <span class="tag">AI4Law @ ICML 2026</span>
                 </div>
-                <h3>Unlocking LLM Legal Reasoning with IRAC-Constrained Chain-of-Thought</h3>
+                <h3><a href="https://openreview.net/forum?id=UEygl7J4Fj">Unlocking LLM Legal Reasoning with IRAC-Constrained Chain-of-Thought</a></h3>
                 <p class="mentor-student">Master student · Adam Rahmoun</p>
               </div>
             </article>
@@ -315,12 +317,12 @@
           <div class="list-head">
             <h2>Full publication list</h2>
           </div>
-          <div class="publication-table" role="list">
+          <div class="publication-table" role="list" id="full-publication-list" data-collapsible="8">
             <article class="publication-entry featured-entry" role="listitem">
               <div class="publication-index">01</div>
               <div class="publication-body">
                 <div class="publication-tags">
-                  <span class="pub-year">2025</span>
+                  <span class="pub-year">2026</span>
                   <span class="tag tag-oral">ACL 2026 Oral</span>
                 </div>
                 <h3><a href="https://arxiv.org/abs/2511.06209">ReProbe: Efficient Test-Time Scaling of Multi-Step Reasoning by Probing Internal States of Large Language Models</a></h3>
@@ -390,30 +392,30 @@
               <div class="publication-index">08</div>
               <div class="publication-body">
                 <div class="publication-tags">
-                  <span class="pub-year">2025</span>
-                  <span class="tag">EMNLP Demo</span>
-                </div>
-                <h3><a href="https://arxiv.org/abs/2507.05010">Co-DETECT: Collaborative Discovery of Edge Cases in Text Classification</a></h3>
-              </div>
-            </article>
-            <article class="publication-entry" role="listitem">
-              <div class="publication-index">09</div>
-              <div class="publication-body">
-                <div class="publication-tags">
-                  <span class="pub-year">2025</span>
+                  <span class="pub-year">2026</span>
                   <span class="tag">SIGIR 2026</span>
                 </div>
                 <h3><a href="https://arxiv.org/abs/2510.05336">WeatherArchive-Bench: Benchmarking Retrieval-Augmented Reasoning for Historical Weather Archives</a></h3>
               </div>
             </article>
             <article class="publication-entry" role="listitem">
-              <div class="publication-index">10</div>
+              <div class="publication-index">09</div>
               <div class="publication-body">
                 <div class="publication-tags">
-                  <span class="pub-year">2025</span>
+                  <span class="pub-year">2026</span>
                   <span class="tag">ICLR 2026</span>
                 </div>
                 <h3><a href="https://arxiv.org/abs/2505.12864">LEXam: Benchmarking Legal Reasoning on 340 Law Exams</a></h3>
+              </div>
+            </article>
+            <article class="publication-entry" role="listitem">
+              <div class="publication-index">10</div>
+              <div class="publication-body">
+                <div class="publication-tags">
+                  <span class="pub-year">2026</span>
+                  <span class="tag tag-oral">EACL 2026 Oral</span>
+                </div>
+                <h3><a href="https://arxiv.org/abs/2506.19467">Can Reasoning Help Large Language Models Capture Human Annotator Disagreement?</a></h3>
               </div>
             </article>
             <article class="publication-entry" role="listitem">
@@ -421,9 +423,9 @@
               <div class="publication-body">
                 <div class="publication-tags">
                   <span class="pub-year">2025</span>
-                  <span class="tag tag-oral">EACL 2026 Oral</span>
+                  <span class="tag">EMNLP Demo</span>
                 </div>
-                <h3><a href="https://arxiv.org/abs/2506.19467">Can Reasoning Help Large Language Models Capture Human Annotator Disagreement?</a></h3>
+                <h3><a href="https://arxiv.org/abs/2507.05010">Co-DETECT: Collaborative Discovery of Edge Cases in Text Classification</a></h3>
               </div>
             </article>
             <article class="publication-entry" role="listitem">
@@ -547,6 +549,9 @@
               </div>
             </article>
           </div>
+          <div class="list-more">
+            <button class="button secondary" type="button" id="publication-toggle" aria-controls="full-publication-list" aria-expanded="false" hidden>Show all 23 publications</button>
+          </div>
         </div>
       </div>
     </section>
@@ -634,6 +639,58 @@
         });
       }, { threshold: 0.12, rootMargin: '0px 0px -8% 0px' });
       document.querySelectorAll('[data-reveal]').forEach(function (el) { io.observe(el); });
+    })();
+
+    /* collapse the full publication list behind a toggle */
+    (function () {
+      var list = document.getElementById('full-publication-list');
+      var toggle = document.getElementById('publication-toggle');
+      if (!list || !toggle) return;
+      var entries = Array.prototype.slice.call(list.children);
+      var keep = parseInt(list.dataset.collapsible, 10) || 8;
+      if (entries.length <= keep) return;
+      var hidden = entries.slice(keep);
+      var collapse = function () { hidden.forEach(function (el) { el.hidden = true; }); };
+      collapse();
+      toggle.hidden = false;
+      toggle.textContent = 'Show all ' + entries.length + ' publications';
+      toggle.addEventListener('click', function () {
+        var open = toggle.getAttribute('aria-expanded') === 'true';
+        if (open) {
+          collapse();
+          toggle.textContent = 'Show all ' + entries.length + ' publications';
+          list.scrollIntoView({ block: 'start', behavior: 'smooth' });
+        } else {
+          hidden.forEach(function (el) { el.hidden = false; });
+          toggle.textContent = 'Show fewer';
+        }
+        toggle.setAttribute('aria-expanded', open ? 'false' : 'true');
+      });
+    })();
+
+    /* highlight the nav link for the section currently in view */
+    (function () {
+      var links = Array.prototype.slice.call(document.querySelectorAll('#nav-links a[href^="#"]'));
+      if (!links.length || !('IntersectionObserver' in window)) return;
+      var sections = links.map(function (a) { return document.querySelector(a.getAttribute('href')); });
+      var visible = [];
+      var paint = function () {
+        var current = sections.filter(function (s) { return s && visible.indexOf(s) !== -1; })[0];
+        links.forEach(function (a, i) {
+          var on = sections[i] === current;
+          a.classList.toggle('is-active', on);
+          if (on) { a.setAttribute('aria-current', 'true'); } else { a.removeAttribute('aria-current'); }
+        });
+      };
+      var io = new IntersectionObserver(function (records) {
+        records.forEach(function (r) {
+          var at = visible.indexOf(r.target);
+          if (r.isIntersecting && at === -1) { visible.push(r.target); }
+          if (!r.isIntersecting && at !== -1) { visible.splice(at, 1); }
+        });
+        paint();
+      }, { rootMargin: '-45% 0px -50% 0px' });
+      sections.forEach(function (s) { if (s) io.observe(s); });
     })();
   </script>
 </body>

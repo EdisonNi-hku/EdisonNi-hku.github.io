@@ -219,6 +219,9 @@ p { margin-top: 0; }
 .nav-links a:hover::after,
 .nav-links a:focus-visible::after { transform: scaleX(1); }
 
+.nav-links a.is-active { color: var(--signal-ink); }
+.nav-links a.is-active::after { transform: scaleX(1); }
+
 /* ---- section rhythm --------------------------------------------------- */
 
 .section-band { padding: clamp(60px, 9vw, 116px) 0; }
@@ -566,6 +569,39 @@ h1 {
 
 .focus-block { margin-top: clamp(34px, 5vw, 58px); }
 
+/* two stacked paragraph rows (homepage research summary) */
+.focus-list {
+  display: grid;
+  gap: clamp(22px, 3vw, 32px);
+}
+
+.focus-row {
+  display: grid;
+  grid-template-columns: minmax(240px, 0.78fr) minmax(0, 1.22fr);
+  gap: clamp(20px, 6vw, 76px);
+  padding-top: clamp(22px, 3vw, 32px);
+  border-top: 1px solid var(--line-strong);
+}
+
+.focus-row-head {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 14px;
+  align-self: start;
+}
+
+.focus-row-head .focus-tag { margin-bottom: 0; }
+
+.focus-row-head h3 {
+  margin: 0;
+  font-size: clamp(1.3rem, 2.2vw, 1.7rem);
+  line-height: 1.12;
+}
+
+.focus-row > p { margin: 0; color: var(--body); font-size: 1.05rem; }
+
 .focus-grid.pair { gap: 18px; }
 
 .focus-cta { margin-top: clamp(24px, 3vw, 34px); }
@@ -607,15 +643,25 @@ h1 {
 
 .card-link,
 .inline-links a {
-  margin-top: auto;
   font-family: var(--mono);
   font-size: 0.76rem;
   text-decoration: none;
 }
 
+.card-link,
+.project-card .inline-links { margin-top: auto; }
+
 .inline-links { gap: 8px 18px; }
 
 /* ---- publications ----------------------------------------------------- */
+
+.publication-entry[hidden] { display: none; }
+
+.list-more {
+  display: flex;
+  justify-content: center;
+  margin-top: 22px;
+}
 
 .publications-heading {
   display: grid;
@@ -1086,6 +1132,8 @@ h1 {
 
   .focus-grid { flex-direction: column; }
   .focus-grid > .focus-card { flex-basis: auto; }
+
+  .focus-row { grid-template-columns: 1fr; gap: 14px; }
 
   .featured-meta { flex-direction: row; align-items: center; text-align: left; }
 }

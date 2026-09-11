@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Jingwei Ni is a PhD student in NLP at ETH Zurich and the University of Zurich working on trustworthy AI: mining uncertainty from large language models and exposing it for human supervision, with applications in climate and legal NLP.">
+  <meta name="description" content="Jingwei Ni studies trustworthy LLMs and agents at ETH Zürich and the University of Zürich, connecting natural-language guidance and calibrated uncertainty to better human oversight.">
   <title>Jingwei Ni | Trustworthy AI Research</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -33,13 +33,13 @@
       <div class="container hero-grid">
         <div class="hero-copy">
           <p class="readout hero-readout">
-            <span>Uncertainty Quantification · NLP</span>
+            <span>Natural-language guidance · Uncertainty</span>
             <span aria-hidden="true" class="readout-div">/</span>
             <span>ETH Zürich × University of Zürich</span>
           </p>
-          <h1>AI systems that know <span class="h1-accent">when to be trusted.</span></h1>
+          <h1>More capable AI. <span class="h1-accent">Better human oversight.</span></h1>
           <p class="hero-lede">
-            I quantify the uncertainty a model already carries and use it to guide human supervision and adaptive test-time reasoning.
+            I study how to make LLMs and agents trustworthy when human instructions are incomplete and success is hard to verify.
           </p>
 
           <figure class="hero-figure">
@@ -88,12 +88,11 @@
       <div class="container intro-grid">
         <div class="intro-head" data-reveal>
           <p class="readout">About · Research</p>
-          <h2 class="section-title">Making uncertainty actionable.</h2>
+          <h2 class="section-title">Research vision.</h2>
         </div>
         <div class="prose" data-reveal>
           <p>
-            I am a dedicated AI researcher passionate about building trustworthy AI systems that can make the future better.
-            I am currently pursuing my PhD (2023–2027, expected) under the joint supervision of
+            I am a PhD candidate under the joint supervision of
             <a href="https://elliottash.com/">Prof. Elliott Ash</a> and
             <a href="http://www.mrinmaya.io/">Prof. Mrinmaya Sachan</a> at
             <a href="https://ethz.ch/en.html">ETH Zurich</a>, and
@@ -102,29 +101,43 @@
             I divide my time equally between both institutions.
           </p>
           <p>
-            My research uses uncertainty quantification for two purposes: deciding when a model can be trusted and guiding how it should reason at test time.
+            I study how to make LLMs and agents trustworthy when human instructions are incomplete and success is hard to verify. My research evolves <strong>natural-language guidance</strong> for more reliable decisions and uses <strong>uncertainty</strong> to understand when model judgments deserve trust. My long-term goal is to make advances in AI capability translate into better human oversight. I want models to help us recognize where our requirements need clarification and when they lack the evidence to act.
           </p>
         </div>
       </div>
       <div class="container focus-block">
+        <div class="section-heading" data-reveal>
+          <p class="readout">Selected work</p>
+          <h2 class="section-title">Research highlights.</h2>
+        </div>
         <div class="focus-list">
           <article class="focus-row" data-reveal>
             <div class="focus-row-head">
-              <span class="focus-tag">Improving reliability</span>
-              <h3>Know when a model can be trusted.</h3>
+              <span class="focus-tag">Natural-language guidance · Judgment</span>
+              <h3><a href="https://aclanthology.org/2025.emnlp-demos.25/">Co-DETECT</a>: Refining natural-language guidance for judgment</h3>
             </div>
-            <p>
-              A trustworthy model should report low confidence whenever it is likely to be wrong. I extract the uncertainty a model already carries and expose it for human supervision. After calibration, these estimates can support selective prediction and determine when a system should answer, abstain, or defer. This ability to flag its own unreliability is what makes oversight possible.
-            </p>
+            <p>Uses <strong>annotation uncertainty</strong> to surface edge cases, then induces generalizable rules for human review, refining incomplete natural-language guidance for more reliable judgments.</p>
           </article>
           <article class="focus-row" data-reveal>
             <div class="focus-row-head">
-              <span class="focus-tag">Enhancing capability</span>
-              <h3>Guide how a model reasons at test time.</h3>
+              <span class="focus-tag">Natural-language guidance · Action</span>
+              <h3><a href="https://arxiv.org/abs/2603.25158">Trace2Skill</a>: Learning natural-language guidance for action</h3>
             </div>
-            <p>
-              Effective test-time scaling needs feedback on whether the current reasoning is reliable, so it can decide whether further inference is worth the cost. Model-internal UQ can provide this self-assessment without repeatedly querying a separate evaluator. Programmatic verifiers provide definitive feedback when criteria are explicit and cheap to check, while LLM judges cover less formal criteria but add cost and latency and remain tied to a chosen rubric. UQ complements these external signals with a model-native test-time signal for deciding when to continue reasoning, explore another path, or stop.
-            </p>
+            <p>Uses <strong>induction</strong> across successful and failed executions to improve natural-language guidance for agents, producing reusable skills that transfer across tasks and models without parameter updates.</p>
+          </article>
+          <article class="focus-row" data-reveal>
+            <div class="focus-row-head">
+              <span class="focus-tag">Guidance · Uncertainty calibration</span>
+              <h3><a href="https://aclanthology.org/2025.naacl-long.271/">DIRAS</a>: Calibrating judgments under natural-language guidance</h3>
+            </div>
+            <p>Improves <strong>uncertainty calibration</strong> through better natural-language guidance, then distills calibrated relevance judgments into smaller models for more efficient deployment.</p>
+          </article>
+          <article class="focus-row" data-reveal>
+            <div class="focus-row-head">
+              <span class="focus-tag">Uncertainty · Reasoning</span>
+              <h3><a href="https://aclanthology.org/2026.acl-long.536/">ReProbe</a>: Using internal uncertainty signals to guide reasoning</h3>
+            </div>
+            <p>Reads <strong>internal uncertainty signals</strong> from a frozen LLM to estimate reasoning-step credibility, enabling efficient step verification and test-time search without a separate large process reward model.</p>
           </article>
         </div>
         <div class="focus-cta" data-reveal>
@@ -179,7 +192,7 @@
             <p class="readout">Publications</p>
             <h2 class="section-title">Selected research</h2>
           </div>
-          <p class="section-note">Quantifying uncertainty in language models and using it to guide reliable decisions and adaptive reasoning.</p>
+          <p class="section-note">Natural-language guidance and uncertainty for more reliable judgments, agent actions, and human oversight.</p>
         </div>
 
         <div class="selected-grid">
@@ -189,7 +202,7 @@
               <span class="tag tag-oral">ACL 2026 Oral</span>
             </div>
             <h3><a href="https://arxiv.org/abs/2511.06209">ReProbe: Efficient Test-Time Scaling of Multi-Step Reasoning by Probing Internal States of Large Language Models</a></h3>
-            <p class="pub-tldr">Reads the model's own internal states mid-reasoning to tell when an answer has settled, scaling test-time reasoning only as far as the model actually needs.</p>
+            <p class="pub-tldr">Reads <strong>internal uncertainty signals</strong> from a frozen LLM to estimate reasoning-step credibility, enabling efficient step verification and test-time search without a separate large process reward model.</p>
             <p class="pub-authors">Jingwei Ni et al.</p>
           </article>
           <article class="publication-card" data-reveal>
@@ -198,7 +211,7 @@
               <span class="tag">EMNLP Main</span>
             </div>
             <h3><a href="https://arxiv.org/abs/2603.25158">Trace2Skill: Distill Trajectory-Local Lessons into Transferable Agent Skills</a></h3>
-            <p class="pub-tldr">Developed at Qwen, Trace2Skill distills successful and failed trajectories into reusable agent skills, using verifier-grounded experience to improve future test-time behavior.</p>
+            <p class="pub-tldr">Uses <strong>induction</strong> across successful and failed executions to improve natural-language guidance for agents, producing reusable skills that transfer across tasks and models without parameter updates.</p>
             <p class="pub-authors">Jingwei Ni et al.</p>
           </article>
           <article class="publication-card" data-reveal>
@@ -216,7 +229,7 @@
               <span class="tag">NAACL 2025 Long</span>
             </div>
             <h3><a href="https://arxiv.org/abs/2406.14162">DIRAS: Efficient LLM Annotation of Document Relevance for Retrieval Augmented Generation</a></h3>
-            <p class="pub-tldr">Trains small, cheap models to judge whether retrieved documents are truly relevant, giving RAG an external check on its evidence before the generator ever sees it.</p>
+            <p class="pub-tldr">Improves <strong>uncertainty calibration</strong> through better natural-language guidance, then distills calibrated relevance judgments into smaller models for more efficient deployment.</p>
             <p class="pub-authors">Jingwei Ni et al.</p>
           </article>
           <article class="publication-card" data-reveal>
@@ -225,7 +238,7 @@
               <span class="tag">EMNLP Demo</span>
             </div>
             <h3><a href="https://arxiv.org/abs/2507.05010">Co-DETECT: Collaborative Discovery of Edge Cases in Text Classification</a></h3>
-            <p class="pub-tldr">Pairs human annotators with an LLM to surface the edge cases a classifier quietly gets wrong, pointing oversight straight at the model's blind spots.</p>
+            <p class="pub-tldr">Uses <strong>annotation uncertainty</strong> to surface edge cases, then induces generalizable rules for human review, refining incomplete natural-language guidance for more reliable judgments.</p>
             <p class="pub-authors">Chenfei Xiong*, Jingwei Ni* et al.</p>
           </article>
           <article class="publication-card" data-reveal>

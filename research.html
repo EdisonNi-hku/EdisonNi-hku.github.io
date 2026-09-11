@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Research statement of Jingwei Ni: building AI systems that know when to be trusted by extracting the uncertainty a model already carries and exposing it for human supervision.">
+  <meta name="description" content="Jingwei Ni’s research vision: evolving natural-language guidance and using uncertainty to make increasingly capable AI easier to supervise.">
   <title>Research Statement | Jingwei Ni</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -31,202 +31,63 @@
   <main id="main">
     <section class="statement-hero">
       <div class="container">
-        <p class="readout">
-          <span>Research statement</span>
-          <span aria-hidden="true" class="readout-div">/</span>
-          <span>Jingwei Ni</span>
-        </p>
-        <h1 class="statement-title">AI systems that know when to be trusted.</h1>
-        <p class="statement-lede">
-          I quantify the uncertainty a model already carries and use it to guide human supervision and adaptive test-time reasoning.
-        </p>
-        <p class="statement-back"><a href="index.html">← Back to homepage</a></p>
+        <p class="readout">Research vision / Jingwei Ni</p>
+        <h1 class="statement-title">More capable AI. Better human oversight.</h1>
+        <p class="statement-lede">I study how to make LLMs and agents trustworthy when human instructions are incomplete and success is hard to verify.</p>
+        <p class="statement-back"><a href="index.html#research">← Back to homepage</a></p>
       </div>
     </section>
 
     <section class="statement-section">
       <div class="container">
         <div class="section-heading" data-reveal>
-          <p class="readout">Topic</p>
-          <h2 class="section-title">Making uncertainty actionable.</h2>
+          <p class="readout">Research vision</p>
+          <h2 class="section-title">Connecting guidance, uncertainty, and oversight.</h2>
         </div>
         <div class="statement-body" data-reveal>
-          <p>
-            My research uses uncertainty quantification for two purposes: deciding when a model can be trusted and guiding how it should reason at test time. A trustworthy model should report low confidence whenever it is likely to be wrong. The uncertainty itself has two sources, epistemic uncertainty about what the model does not know and aleatoric uncertainty arising from irreducible ambiguity in the world (<a class="cite" href="#ref-huellermeier2021">Hüllermeier &amp; Waegeman, 2021</a>; <a class="cite" href="#ref-shorinwa2024">Shorinwa et al., 2024</a>).
-          </p>
+          <p>I study how to make LLMs and agents trustworthy when human instructions are incomplete and success is hard to verify. My research evolves <strong>natural-language guidance</strong> for more reliable decisions and uses <strong>uncertainty</strong> to understand when model judgments deserve trust. My long-term goal is to make advances in AI capability translate into better human oversight. I want models to help us recognize where our requirements need clarification and when they lack the evidence to act.</p>
+          <p>These questions are connected. Clearer guidance gives us a more precise basis for judging a model’s behavior. Uncertainty can help identify cases where that guidance is incomplete or the available evidence does not support a confident judgment. Understanding which problem we face matters: clarifying a requirement, gathering evidence, and improving a model’s reasoning address different limitations.</p>
         </div>
       </div>
     </section>
 
-    <div class="container focus-block">
-      <div class="focus-grid pair">
-        <article class="focus-card" data-reveal>
-          <span class="focus-tag">Use 01 · Improving reliability</span>
-          <h3>Know when a model can be trusted.</h3>
-          <p>After calibration, uncertainty estimates can support selective prediction, surface difficult cases for human supervision, and determine when a system should answer, abstain, or defer.</p>
-          <a class="card-link" href="#reliability">Why reliability needs uncertainty →</a>
-        </article>
-        <article class="focus-card accent" data-reveal>
-          <span class="focus-tag">Use 02 · Enhancing capability</span>
-          <h3>Guide how a model reasons at test time.</h3>
-          <p>Model-internal uncertainty can provide a low-cost self-assessment signal for deciding when to continue reasoning, explore another path, or stop.</p>
-          <a class="card-link" href="#capability">Why capability needs uncertainty →</a>
-        </article>
-      </div>
-    </div>
-
-    <section class="statement-section alt" id="reliability">
+    <section class="statement-section alt" id="guidance">
       <div class="container">
         <div class="section-heading" data-reveal>
-          <p class="readout">Use 01 · Improving reliability</p>
-          <h2 class="section-title">Know when a model can be trusted.</h2>
-        </div>
-        <div class="argument-list">
-          <article class="argument" data-reveal>
-            <div class="argument-index">01</div>
-            <div class="argument-text">
-              <h3>Uncertainty reporting enables oversight.</h3>
-              <p>
-                External rewards can mistake reward gaming for real capability. METR found that a frontier model exploited hidden tests, while Cursor traced many benchmark wins to answers retrieved from public sources rather than genuine fixes (<a class="cite" href="#ref-metr2026">METR, 2026</a>; <a class="cite" href="#ref-cursor2026">Cursor, 2026</a>). Bengio et al.'s Scientist AI argues for supervising agentic systems with non-agentic, uncertainty-aware guardrails (<a class="cite" href="#ref-bengio2025">Bengio et al., 2025</a>). When an external score cannot distinguish genuine capability from reward gaming, reported uncertainty provides a complementary signal for deciding which cases require oversight.
-              </p>
-            </div>
-          </article>
-          <article class="argument" data-reveal>
-            <div class="argument-index">02</div>
-            <div class="argument-text">
-              <h3>Existing evaluation misses disagreement and underspecified criteria.</h3>
-              <p>
-                The field ranks, filters, and aligns models with LLM judges (<a class="cite" href="#ref-zheng2023">Zheng et al., 2023</a>; <a class="cite" href="#ref-gu2024">Gu et al., 2024</a>), but criteria such as helpfulness, harm, and novelty are contested across legitimate viewpoints. A judge commits to one reading and returns a single score, leaving evaluation most miscalibrated where humans disagree (<a class="cite" href="#ref-chochlakis2025">Chochlakis et al., 2025</a>; <a class="cite" href="#ref-baan2022">Baan et al., 2022</a>; <a class="cite" href="#ref-li2025a">Li et al., 2025a</a>). Real instructions are also underspecified, so models often invent missing details and act instead of asking (<a class="cite" href="#ref-wang2024">Wang et al., 2024</a>; <a class="cite" href="#ref-li2025b">Li et al., 2025b</a>). These cases require uncertainty to be surfaced rather than collapsed into a confident decision.
-              </p>
-            </div>
-          </article>
-          <article class="argument" data-reveal>
-            <div class="argument-index">03</div>
-            <div class="argument-text">
-              <h3>More scaling cannot resolve irreducible uncertainty.</h3>
-              <p>
-                When uncertainty comes from genuine ambiguity or conflicting human judgments, more compute on the same input cannot resolve it. My own work shows that making models reason longer can actively harm their ability to represent human disagreement (<a class="cite" href="#ref-ni2026">Ni et al., 2026</a>). Reliable systems must recognize when additional inference is useful and when the unresolved uncertainty should instead be exposed to people.
-              </p>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="statement-section" id="capability">
-      <div class="container">
-        <div class="section-heading" data-reveal>
-          <p class="readout">Use 02 · Enhancing capability</p>
-          <h2 class="section-title">Guide how a model reasons at test time.</h2>
+          <p class="readout">Natural-language guidance</p>
+          <h2 class="section-title">Learning guidance from experience.</h2>
         </div>
         <div class="statement-body" data-reveal>
-          <p>
-            Effective test-time scaling needs feedback on whether the current reasoning is reliable, so it can decide whether further inference is worth the cost. Model-internal uncertainty can provide this self-assessment without repeatedly querying a separate evaluator.
-          </p>
-          <p>
-            Programmatic verifiers provide definitive feedback when criteria are explicit and cheap to check, which has made them powerful for reinforcement learning and test-time improvement in domains such as mathematics and code (<a class="cite" href="#ref-lambert2024">Lambert et al., 2024</a>; <a class="cite" href="#ref-deepseek2025">DeepSeek-AI, 2025</a>). Their coverage ends when objectives cannot be completely formalized. LLM judges extend evaluation to qualitative criteria (<a class="cite" href="#ref-zheng2023">Zheng et al., 2023</a>; <a class="cite" href="#ref-gu2024">Gu et al., 2024</a>), but repeated calls add test-time cost and latency and remain tied to a chosen rubric. UQ complements these external signals with a model-native test-time signal for deciding when to continue reasoning, explore another path, or stop.
-          </p>
+          <p>I study how observations across cases can be distilled into guidance that generalizes. In <a href="https://aclanthology.org/2025.emnlp-demos.25/">Co-DETECT</a>, uncertain annotations help surface edge cases, and induction produces rules for human review. In <a href="https://arxiv.org/abs/2603.25158">Trace2Skill</a>, lessons from successful and failed executions become reusable guidance for agents.</p>
+          <p>The distinction between judgment and action is important. Evaluation criteria describe how to assess behavior; procedural guidance helps an agent act effectively. My future research asks when experience reveals a gap in a procedure and when it reveals a requirement that needs clarification.</p>
         </div>
       </div>
     </section>
 
-    <section class="statement-section alt">
+    <section class="statement-section" id="uncertainty">
       <div class="container">
         <div class="section-heading" data-reveal>
-          <p class="readout">My research</p>
-          <h2 class="section-title">From uncertainty estimates to better decisions.</h2>
+          <p class="readout">Uncertainty</p>
+          <h2 class="section-title">Understanding when judgments deserve trust.</h2>
         </div>
         <div class="statement-body" data-reveal>
-          <p>
-            <strong>For reliability,</strong> I study whether models can represent human disagreement rather than collapse it into one overconfident answer (<a href="https://arxiv.org/abs/2506.19467">Can Reasoning Help</a>). I build uncertainty-aware classifiers distilled into efficient, deployable models (<a href="https://arxiv.org/abs/2402.11073">AFaCTA</a>, <a href="https://arxiv.org/abs/2406.14162">DIRAS</a>), evidence-grounded specialists whose claims remain traceable to their sources (<a href="https://arxiv.org/abs/2402.08277">Evidence-Based QA</a>), and interfaces that surface model blind spots for human adjudication (<a href="https://arxiv.org/abs/2507.05010">Co-DETECT</a>). After calibration, the resulting uncertainty estimates support selective prediction and human supervision.
-          </p>
-          <p>
-            <strong>For capability,</strong> <a href="https://arxiv.org/abs/2511.06209">ReProbe</a> reads a model's internal states during multi-step reasoning to estimate whether its answer has settled. It uses this self-assessment signal to allocate test-time compute only where additional reasoning is useful, with gold evaluation and extensive out-of-distribution testing.
-          </p>
+          <p><a href="https://aclanthology.org/2025.naacl-long.271/">DIRAS</a> connects natural-language relevance criteria with calibrated judgments that can be distilled into smaller models. <a href="https://aclanthology.org/2026.acl-long.536/">ReProbe</a> reads a frozen model’s internal states to estimate reasoning-step credibility, supporting efficient verification and test-time search.</p>
+          <p>These methods provide evidence about reliability within their tested settings. Uncertainty alone does not establish that a model is safe, and a confident prediction can still be wrong. I want to understand when these signals support useful intervention and how their reliability changes as models learn and act.</p>
         </div>
       </div>
     </section>
 
-    <section class="statement-section alt" id="references">
+    <section class="statement-section alt" id="oversight">
       <div class="container">
         <div class="section-heading" data-reveal>
-          <p class="readout">References</p>
-          <h2 class="section-title">Works cited.</h2>
+          <p class="readout">Long-term direction</p>
+          <h2 class="section-title">Making capability useful for human oversight.</h2>
         </div>
-        <ul class="reference-list" data-reveal>
-          <li id="ref-huellermeier2021">
-            <span class="ref-key">Hüllermeier &amp; Waegeman, 2021</span>
-            Hüllermeier, E., &amp; Waegeman, W. (2021). Aleatoric and epistemic uncertainty in machine learning: an introduction to concepts and methods. <em>Machine Learning, 110</em>(3), 457–506. <a href="https://link.springer.com/article/10.1007/s10994-021-05946-3">link</a>
-          </li>
-          <li id="ref-shorinwa2024">
-            <span class="ref-key">Shorinwa et al., 2024</span>
-            Shorinwa, O., Mei, Z., Lidard, J., Ren, A. Z., &amp; Majumdar, A. (2024). A Survey on Uncertainty Quantification of Large Language Models: Taxonomy, Open Research Challenges, and Future Directions. <em>arXiv:2412.05563</em>. <a href="https://arxiv.org/abs/2412.05563">link</a>
-          </li>
-          <li id="ref-metr2026">
-            <span class="ref-key">METR, 2026</span>
-            METR. (2026, June 26). Summary of METR's predeployment evaluation of GPT-5.6 Sol. <a href="https://metr.org/blog/2026-06-26-gpt-5-6-sol/">link</a>
-          </li>
-          <li id="ref-cursor2026">
-            <span class="ref-key">Cursor, 2026</span>
-            Jain, N. (2026, June 25). Reward hacking is swamping model intelligence gains. <em>Cursor</em>. <a href="https://cursor.com/blog/reward-hacking-coding-benchmarks">link</a>
-          </li>
-          <li id="ref-bengio2025">
-            <span class="ref-key">Bengio et al., 2025</span>
-            Bengio, Y., et al. (2025). Superintelligent Agents Pose Catastrophic Risks: Can Scientist AI Offer a Safer Path? <em>arXiv:2502.15657</em>. <a href="https://arxiv.org/abs/2502.15657">link</a>
-          </li>
-          <li id="ref-zheng2023">
-            <span class="ref-key">Zheng et al., 2023</span>
-            Zheng, L., et al. (2023). Judging LLM-as-a-Judge with MT-Bench and Chatbot Arena. <em>NeurIPS Datasets and Benchmarks</em>. <a href="https://arxiv.org/abs/2306.05685">link</a>
-          </li>
-          <li id="ref-gu2024">
-            <span class="ref-key">Gu et al., 2024</span>
-            Gu, J., et al. (2024). A Survey on LLM-as-a-Judge. <em>arXiv:2411.15594</em>. <a href="https://arxiv.org/abs/2411.15594">link</a>
-          </li>
-          <li id="ref-chochlakis2025">
-            <span class="ref-key">Chochlakis et al., 2025</span>
-            Chochlakis, G., et al. (2025). Aggregation Artifacts in Subjective Tasks Collapse Large Language Models' Posteriors. <em>NAACL</em>. <a href="https://arxiv.org/abs/2410.13776">link</a>
-          </li>
-          <li id="ref-baan2022">
-            <span class="ref-key">Baan et al., 2022</span>
-            Baan, J., et al. (2022). Stop Measuring Calibration When Humans Disagree. <em>EMNLP</em>. <a href="https://arxiv.org/abs/2210.16133">link</a>
-          </li>
-          <li id="ref-li2025a">
-            <span class="ref-key">Li et al., 2025a</span>
-            Li, Z., Schuurmans, D., Dai, B., &amp; Palangi, H. (2025). Judging with Confidence: Calibrating Autoraters to Preference Distributions. <em>arXiv:2510.00263</em>. <a href="https://arxiv.org/abs/2510.00263">link</a>
-          </li>
-          <li id="ref-lambert2024">
-            <span class="ref-key">Lambert et al., 2024</span>
-            Lambert, N., et al. (2024). Tülu 3: Pushing Frontiers in Open Language Model Post-Training. <em>arXiv:2411.15124</em>. <a href="https://arxiv.org/abs/2411.15124">link</a>
-          </li>
-          <li id="ref-deepseek2025">
-            <span class="ref-key">DeepSeek-AI, 2025</span>
-            DeepSeek-AI (Guo, D., et al.). (2025). DeepSeek-R1: Incentivizing Reasoning Capability in LLMs via Reinforcement Learning. <em>Nature, 645</em>, 633–638 (arXiv:2501.12948). <a href="https://arxiv.org/abs/2501.12948">link</a>
-          </li>
-          <li id="ref-wang2024">
-            <span class="ref-key">Wang et al., 2024</span>
-            Wang, W., et al. (2024). Learning to Ask: When LLM Agents Meet Unclear Instruction. <em>arXiv:2409.00557</em>. <a href="https://arxiv.org/abs/2409.00557">link</a>
-          </li>
-          <li id="ref-li2025b">
-            <span class="ref-key">Li et al., 2025b</span>
-            Li, B. Z., Kim, J., &amp; Wang, R. (2025). QuestBench: Can LLMs Ask the Right Question to Acquire Information in Reasoning Tasks? <em>NeurIPS Datasets and Benchmarks</em> (arXiv:2503.22674). <a href="https://arxiv.org/abs/2503.22674">link</a>
-          </li>
-          <li id="ref-ni2026">
-            <span class="ref-key">Ni et al., 2026</span>
-            Ni, J., Fan, Y., et al. (2026). Can Reasoning Help Large Language Models Capture Human Annotator Disagreement? <em>EACL</em>. <a href="https://arxiv.org/abs/2506.19467">link</a>
-          </li>
-          <li id="ref-plank2022">
-            <span class="ref-key">Plank, 2022</span>
-            Plank, B. (2022). The "Problem" of Human Label Variation: On Ground Truth in Data, Modeling and Evaluation. <em>EMNLP</em>. <a href="https://arxiv.org/abs/2211.02570">link</a>
-          </li>
-          <li id="ref-uma2021">
-            <span class="ref-key">Uma et al., 2021</span>
-            Uma, A., et al. (2021). Learning from Disagreement: A Survey. <em>Journal of Artificial Intelligence Research, 72</em>, 1385–1470. <a href="https://www.jair.org/index.php/jair/article/view/12752">link</a>
-          </li>
-          <li id="ref-xu2025">
-            <span class="ref-key">Xu et al., 2025</span>
-            Xu, M., Santosh, T. Y. S. S., &amp; Plank, B. (2025). From Noise to Signal to Selbstzweck: Reframing Human Label Variation in the Era of Post-training in NLP. <em>arXiv:2510.12817</em>. <a href="https://arxiv.org/abs/2510.12817">link</a>
-          </li>
-        </ul>
+        <div class="statement-body" data-reveal>
+          <p>My long-term goal is for increasingly capable agents to help establish the conditions under which their actions can be trusted. This includes identifying requirements that need clarification and seeking evidence when a decision remains unresolved.</p>
+          <p>I am interested in whether training can make failures easier for independent supervisors to detect, and whether useful uncertainty signals remain reliable under changing incentives. The goal is to improve oversight while preserving the ability to complete tasks effectively.</p>
+          <p><a href="index.html#research">Explore research highlights →</a></p>
+        </div>
       </div>
     </section>
   </main>

@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Jingwei Ni’s research vision: evolving natural-language guidance and using uncertainty to make increasingly capable AI easier to supervise.">
+  <meta name="description" content="Jingwei Ni’s research vision: alignment beyond the verifiable, through judgment with fuzzy criteria and uncertainty quantification.">
   <title>Research Statement | Jingwei Ni</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -32,8 +32,8 @@
     <section class="statement-hero">
       <div class="container">
         <p class="readout">Research vision / Jingwei Ni</p>
-        <h1 class="statement-title">More capable AI. Better human oversight.</h1>
-        <p class="statement-lede">I study how to make LLMs and agents trustworthy when human instructions are incomplete and success is hard to verify.</p>
+        <h1 class="statement-title">Alignment beyond the verifiable.</h1>
+        <p class="statement-lede">People instruct agents in natural language, which leaves a fuzzy and unverifiable part. I study how to make LLMs and agents trustworthy on that part.</p>
         <p class="statement-back"><a href="index.html#research">← Back to homepage</a></p>
       </div>
     </section>
@@ -42,54 +42,55 @@
       <div class="container">
         <div class="section-heading" data-reveal>
           <p class="readout">Research vision</p>
-          <h2 class="section-title">Connecting guidance, uncertainty, and oversight.</h2>
+          <h2 class="section-title">The fuzzy part is the hardest part.</h2>
         </div>
         <div class="statement-body" data-reveal>
-          <p>I study how to make LLMs and agents trustworthy when human instructions are incomplete and success is hard to verify. My research evolves <strong>natural-language guidance</strong> for more reliable decisions and uses <strong>uncertainty</strong> to understand when model judgments deserve trust. My long-term goal is to make advances in AI capability translate into better human oversight. I want models to help us recognize where our requirements need clarification and when they lack the evidence to act.</p>
-          <p>These questions are connected. Clearer guidance gives us a more precise basis for judging a model’s behavior. Uncertainty can help identify cases where that guidance is incomplete or the available evidence does not support a confident judgment. Understanding which problem we face matters: clarifying a requirement, gathering evidence, and improving a model’s reasoning address different limitations.</p>
+          <p>People instruct agents and write rubrics in natural language, which leaves a <strong>fuzzy</strong> and unverifiable part whose ground truth is a <strong>distribution</strong> of human judgments rather than a point answer. I believe that getting this part right, so that a model is distributionally aligned with people and knows when it is uncertain, is key to teaching AI taste, preventing reward hacking, and aligning AI beyond the verifiable.</p>
+          <p>My PhD work covers two foundations: <strong>judgment with fuzzy criteria</strong>, evaluating and improving how LLMs handle human disagreement and building human-AI collaborative annotation tools, and <strong>uncertainty quantification</strong> that exposes a model’s confidence about its epistemic states.</p>
         </div>
       </div>
     </section>
 
-    <section class="statement-section alt" id="guidance">
+    <section class="statement-section alt" id="disagreement">
       <div class="container">
         <div class="section-heading" data-reveal>
-          <p class="readout">Natural-language guidance</p>
-          <h2 class="section-title">Learning guidance from experience.</h2>
+          <p class="readout">Fuzzy criteria · Disagreement</p>
+          <h2 class="section-title">Evaluating and improving how LLMs handle fuzzy criteria.</h2>
         </div>
         <div class="statement-body" data-reveal>
-          <p>I study how observations across cases can be distilled into guidance that generalizes. In <a href="https://aclanthology.org/2025.emnlp-demos.25/">Co-DETECT</a>, uncertain annotations help surface edge cases, and induction produces rules for human review. In <a href="https://arxiv.org/abs/2603.25158">Trace2Skill</a>, lessons from successful and failed executions become reusable guidance for agents.</p>
-          <p>The distinction between judgment and action is important. Evaluation criteria describe how to assess behavior; procedural guidance helps an agent act effectively. My future research asks when experience reveals a gap in a procedure and when it reveals a requirement that needs clarification.</p>
+          <p>Whatever a rubric leaves open, an LLM judge decides from its own prior. So I test models against distributions of human judgments rather than a single majority label. In <a href="https://aclanthology.org/2026.eacl-long.3/">Can Reasoning Help LLMs Capture Human Annotator Disagreement?</a>, we find that LLMs collapse legitimate disagreement into one overconfident answer, and that RLVR-style reasoning training makes this worse.</p>
+          <p><a href="https://aclanthology.org/2025.naacl-long.271/">DIRAS</a> shows the constructive side: under nuanced natural-language relevance criteria, an LLM can learn calibrated judgments that distill into small models, so that calibrated judges run at deployment cost.</p>
         </div>
       </div>
     </section>
 
-    <section class="statement-section" id="uncertainty">
+    <section class="statement-section" id="tools">
       <div class="container">
         <div class="section-heading" data-reveal>
-          <p class="readout">Uncertainty</p>
-          <h2 class="section-title">Understanding when judgments deserve trust.</h2>
+          <p class="readout">Fuzzy criteria · Tools</p>
+          <h2 class="section-title">Human-AI collaborative annotation tools.</h2>
         </div>
         <div class="statement-body" data-reveal>
-          <p><a href="https://aclanthology.org/2025.naacl-long.271/">DIRAS</a> connects natural-language relevance criteria with calibrated judgments that can be distilled into smaller models. <a href="https://aclanthology.org/2026.acl-long.536/">ReProbe</a> reads a frozen model’s internal states to estimate reasoning-step credibility, supporting efficient verification and test-time search.</p>
-          <p>These methods provide evidence about reliability within their tested settings. Uncertainty alone does not establish that a model is safe, and a confident prediction can still be wrong. I want to understand when these signals support useful intervention and how their reliability changes as models learn and act.</p>
+          <p>Judgment under fuzzy criteria needs people in the loop, and the tool decides where their judgment goes. <a href="https://aclanthology.org/2025.emnlp-demos.25/">Co-DETECT</a> lets an expert refine a rough codebook: it uses annotation uncertainty to surface edge cases the codebook does not cover, induces generalizable rules for them, and leaves the expert in charge of what enters the codebook.</p>
+          <p><a href="https://aclanthology.org/2024.acl-long.104/">AFaCTA</a> and DIRAS calibrate LLM annotators on a small human set and route items between people and models, so that validated labels scale into benchmarks. Our disagreement work adds a reason to take each person’s judgment seriously: disagreement is mostly systematic rather than noise.</p>
         </div>
       </div>
     </section>
 
-    <section class="statement-section alt" id="oversight">
+    <section class="statement-section alt" id="uncertainty">
       <div class="container">
         <div class="section-heading" data-reveal>
-          <p class="readout">Long-term direction</p>
-          <h2 class="section-title">Making capability useful for human oversight.</h2>
+          <p class="readout">Uncertainty quantification</p>
+          <h2 class="section-title">Exposing a model’s epistemic states.</h2>
         </div>
         <div class="statement-body" data-reveal>
-          <p>My long-term goal is for increasingly capable agents to help establish the conditions under which their actions can be trusted. This includes identifying requirements that need clarification and seeking evidence when a decision remains unresolved.</p>
-          <p>I am interested in whether training can make failures easier for independent supervisors to detect, and whether useful uncertainty signals remain reliable under changing incentives. The goal is to improve oversight while preserving the ability to complete tasks effectively.</p>
+          <p>Honest clarification requires that a model knows where it is unsure. <a href="https://aclanthology.org/2026.acl-long.536/">ReProbe</a> reads a frozen LLM’s internal states to estimate the credibility of each reasoning step, enabling efficient verification and test-time search without a large process reward model. <a href="https://arxiv.org/abs/2610.30450">BELT</a> reads a model’s beliefs about its current and future answer from the same hidden states and fits a small stopping policy on them, so one probe serves different accuracy-cost trade-offs and transfers from math to coding and agentic tasks.</p>
+          <p>Our disagreement work adds a caution: reasoning training degrades a model’s ability to capture how annotators disagree, so calibration has to be measured against distributions explicitly.</p>
           <p><a href="index.html#research">Explore research highlights →</a></p>
         </div>
       </div>
     </section>
+
   </main>
 
   <footer class="site-footer">

@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Jingwei Ni studies trustworthy LLMs and agents at ETH Zürich and the University of Zürich, connecting natural-language guidance and calibrated uncertainty to better human oversight.">
+  <meta name="description" content="Jingwei Ni studies trustworthy LLMs and agents at ETH Zürich and the University of Zürich: distributional alignment to fuzzy human criteria, human-AI collaborative annotation tools, and uncertainty quantification.">
   <title>Jingwei Ni | Trustworthy AI Research</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -33,13 +33,13 @@
       <div class="container hero-grid">
         <div class="hero-copy">
           <p class="readout hero-readout">
-            <span>Natural-language guidance · Uncertainty</span>
+            <span>Distributional alignment · Uncertainty</span>
             <span aria-hidden="true" class="readout-div">/</span>
             <span>ETH Zürich × University of Zürich</span>
           </p>
-          <h1>More capable AI. <span class="h1-accent">Better human oversight.</span></h1>
+          <h1>Alignment <span class="h1-accent">beyond the verifiable.</span></h1>
           <p class="hero-lede">
-            I study how to make LLMs and agents trustworthy when human instructions are incomplete and success is hard to verify.
+            People instruct agents in natural language, which leaves a fuzzy and unverifiable part. I study how to make LLMs and agents trustworthy on that part.
           </p>
 
           <figure class="hero-figure">
@@ -101,7 +101,10 @@
             I divide my time equally between both institutions.
           </p>
           <p>
-            I study how to make LLMs and agents trustworthy when human instructions are incomplete and success is hard to verify. My research evolves <strong>natural-language guidance</strong> for more reliable decisions and uses <strong>uncertainty</strong> to understand when model judgments deserve trust. My long-term goal is to make advances in AI capability translate into better human oversight. I want models to help us recognize where our requirements need clarification and when they lack the evidence to act.
+            People instruct agents and write rubrics in natural language, which leaves a <strong>fuzzy</strong> and unverifiable part whose ground truth is a <strong>distribution</strong> of human judgments rather than a point answer. I believe that getting this part right, so that a model is distributionally aligned with people and knows when it is uncertain, is key to teaching AI taste, preventing reward hacking, and aligning AI beyond the verifiable.
+          </p>
+          <p>
+            My PhD work covers two foundations: <strong>judgment with fuzzy criteria</strong>, evaluating and improving how LLMs handle human disagreement and building human-AI collaborative annotation tools, and <strong>uncertainty quantification</strong> that exposes a model's confidence about its epistemic states.
           </p>
         </div>
       </div>
@@ -113,31 +116,24 @@
         <div class="focus-list">
           <article class="focus-row" data-reveal>
             <div class="focus-row-head">
-              <span class="focus-tag">Natural-language guidance · Judgment</span>
-              <h3><a href="https://aclanthology.org/2025.emnlp-demos.25/">Co-DETECT</a>: Refining natural-language guidance for judgment</h3>
+              <span class="focus-tag">Fuzzy criteria · Disagreement</span>
+              <h3>Evaluating and improving how LLMs handle fuzzy criteria</h3>
             </div>
-            <p>Uses <strong>annotation uncertainty</strong> to surface edge cases, then induces generalizable rules for human review, refining incomplete natural-language guidance for more reliable judgments.</p>
+            <p>LLM judges inherit the fuzzy part of a rubric, so I test models against <strong>distributions</strong> of human judgments rather than a majority label. <a href="https://aclanthology.org/2026.eacl-long.3/">Can Reasoning Help LLMs Capture Human Annotator Disagreement?</a> finds that models collapse legitimate disagreement into one overconfident answer, and that RLVR-style reasoning training makes this worse. <a href="https://aclanthology.org/2025.naacl-long.271/">DIRAS</a> learns <strong>calibrated</strong> judgments under nuanced natural-language criteria and distills them into small models.</p>
           </article>
           <article class="focus-row" data-reveal>
             <div class="focus-row-head">
-              <span class="focus-tag">Natural-language guidance · Action</span>
-              <h3><a href="https://arxiv.org/abs/2603.25158">Trace2Skill</a>: Learning natural-language guidance for action</h3>
+              <span class="focus-tag">Fuzzy criteria · Tools</span>
+              <h3>Human-AI collaborative annotation tools</h3>
             </div>
-            <p>Uses <strong>induction</strong> across successful and failed executions to improve natural-language guidance for agents, producing reusable skills that transfer across tasks and models without parameter updates.</p>
+            <p>Judgment under fuzzy criteria needs people in the loop, and the tool decides where their judgment goes. <a href="https://aclanthology.org/2025.emnlp-demos.25/">Co-DETECT</a> lets an expert refine a rough codebook: it uses <strong>annotation uncertainty</strong> to surface edge cases the codebook does not cover, induces generalizable rules for them, and leaves the expert in charge of what enters the codebook. <a href="https://aclanthology.org/2024.acl-long.104/">AFaCTA</a> calibrates LLM annotators on a small human set and routes items between people and models, so validated labels scale into benchmarks.</p>
           </article>
           <article class="focus-row" data-reveal>
             <div class="focus-row-head">
-              <span class="focus-tag">Guidance · Uncertainty calibration</span>
-              <h3><a href="https://aclanthology.org/2025.naacl-long.271/">DIRAS</a>: Calibrating judgments under natural-language guidance</h3>
+              <span class="focus-tag">Uncertainty quantification</span>
+              <h3>Exposing a model's epistemic states</h3>
             </div>
-            <p>Improves <strong>uncertainty calibration</strong> through better natural-language guidance, then distills calibrated relevance judgments into smaller models for more efficient deployment.</p>
-          </article>
-          <article class="focus-row" data-reveal>
-            <div class="focus-row-head">
-              <span class="focus-tag">Uncertainty · Reasoning</span>
-              <h3><a href="https://aclanthology.org/2026.acl-long.536/">ReProbe</a>: Using internal uncertainty signals to guide reasoning</h3>
-            </div>
-            <p>Reads <strong>internal uncertainty signals</strong> from a frozen LLM to estimate reasoning-step credibility, enabling efficient step verification and test-time search without a separate large process reward model.</p>
+            <p>Honest clarification requires that a model knows where it is unsure. <a href="https://aclanthology.org/2026.acl-long.536/">ReProbe</a> reads a frozen LLM's <strong>internal states</strong> to estimate the credibility of each reasoning step, enabling efficient verification and test-time search without a large process reward model. <a href="https://arxiv.org/abs/2610.30450">BELT</a> reads a model's <strong>beliefs</strong> about its current and future answer from the same hidden states and fits a small stopping policy on them, so one probe serves different accuracy-cost trade-offs and transfers from math to coding and agentic tasks.</p>
           </article>
         </div>
         <div class="focus-cta" data-reveal>
@@ -192,7 +188,7 @@
             <p class="readout">Publications</p>
             <h2 class="section-title">Selected research</h2>
           </div>
-          <p class="section-note">Natural-language guidance and uncertainty for more reliable judgments, agent actions, and human oversight.</p>
+          <p class="section-note">Distributional alignment to fuzzy human criteria, human-AI collaborative annotation tools, and uncertainty quantification.</p>
         </div>
 
         <div class="selected-grid">
@@ -208,10 +204,19 @@
           <article class="publication-card" data-reveal>
             <div class="publication-meta">
               <span class="pub-year">2026</span>
+              <span class="tag">Preprint</span>
+            </div>
+            <h3><a href="https://arxiv.org/abs/2610.30450">Same Beliefs, Different Policies: Learning Reusable Representations for Early Stopping in LLM Reasoning</a></h3>
+            <p class="pub-tldr">Reads a frozen model's <strong>beliefs</strong> about its current and future answer from hidden states and fits a small stopping policy on them, cutting reasoning tokens by 41–51% at equal accuracy and transferring from math to coding and agentic tasks.</p>
+            <p class="pub-authors">Jingwei Ni et al.</p>
+          </article>
+          <article class="publication-card" data-reveal>
+            <div class="publication-meta">
+              <span class="pub-year">2026</span>
               <span class="tag">EMNLP Main</span>
             </div>
             <h3><a href="https://arxiv.org/abs/2603.25158">Trace2Skill: Distill Trajectory-Local Lessons into Transferable Agent Skills</a></h3>
-            <p class="pub-tldr">Uses <strong>induction</strong> across successful and failed executions to improve natural-language guidance for agents, producing reusable skills that transfer across tasks and models without parameter updates.</p>
+            <p class="pub-tldr">Consolidates lessons from successful and failed agent executions into reusable <strong>natural-language skills</strong> that transfer across tasks and models without parameter updates.</p>
             <p class="pub-authors">Jingwei Ni et al.</p>
           </article>
           <article class="publication-card" data-reveal>
@@ -220,7 +225,7 @@
               <span class="tag tag-oral">EACL 2026 Oral</span>
             </div>
             <h3><a href="https://arxiv.org/abs/2506.19467">Can Reasoning Help Large Language Models Capture Human Annotator Disagreement?</a></h3>
-            <p class="pub-tldr">Tests whether reasoning lets a model recognize when a question is genuinely contested, instead of collapsing real human disagreement into one overconfident answer.</p>
+            <p class="pub-tldr">Scores LLMs against <strong>distributions</strong> of human annotator judgments: models collapse legitimate disagreement into one overconfident answer, and RLVR-style reasoning training makes this worse.</p>
             <p class="pub-authors">Jingwei Ni*, Yu Fan* et al.</p>
           </article>
           <article class="publication-card" data-reveal>
@@ -229,7 +234,7 @@
               <span class="tag">NAACL 2025 Long</span>
             </div>
             <h3><a href="https://arxiv.org/abs/2406.14162">DIRAS: Efficient LLM Annotation of Document Relevance for Retrieval Augmented Generation</a></h3>
-            <p class="pub-tldr">Improves <strong>uncertainty calibration</strong> through better natural-language guidance, then distills calibrated relevance judgments into smaller models for more efficient deployment.</p>
+            <p class="pub-tldr">Learns <strong>calibrated</strong> relevance judgments under nuanced natural-language criteria, then distills them into smaller models for efficient deployment.</p>
             <p class="pub-authors">Jingwei Ni et al.</p>
           </article>
           <article class="publication-card" data-reveal>
@@ -238,17 +243,8 @@
               <span class="tag">EMNLP Demo</span>
             </div>
             <h3><a href="https://arxiv.org/abs/2507.05010">Co-DETECT: Collaborative Discovery of Edge Cases in Text Classification</a></h3>
-            <p class="pub-tldr">Uses <strong>annotation uncertainty</strong> to surface edge cases, then induces generalizable rules for human review, refining incomplete natural-language guidance for more reliable judgments.</p>
+            <p class="pub-tldr">Uses <strong>annotation uncertainty</strong> to surface edge cases a coarse codebook does not cover, then induces generalizable rules that the expert reviews and adds to the codebook.</p>
             <p class="pub-authors">Chenfei Xiong*, Jingwei Ni* et al.</p>
-          </article>
-          <article class="publication-card" data-reveal>
-            <div class="publication-meta">
-              <span class="pub-year">2024</span>
-              <span class="tag">ACL 2024 Long</span>
-            </div>
-            <h3><a href="https://arxiv.org/abs/2402.08277">Towards Faithful and Robust LLM Specialists for Evidence-Based Question-Answering</a></h3>
-            <p class="pub-tldr">Trains open QA specialists to answer strictly from the evidence they are given and resist being misled when it is noisy or missing — keeping every answer traceable to its source.</p>
-            <p class="pub-authors">Tobias Schimanski*, Jingwei Ni* et al.</p>
           </article>
         </div>
 
@@ -333,8 +329,18 @@
             <h2>Full publication list</h2>
           </div>
           <div class="publication-table" role="list" id="full-publication-list" data-collapsible="8">
-            <article class="publication-entry featured-entry" role="listitem">
+            <article class="publication-entry" role="listitem">
               <div class="publication-index">01</div>
+              <div class="publication-body">
+                <div class="publication-tags">
+                  <span class="pub-year">2026</span>
+                  <span class="tag">Preprint</span>
+                </div>
+                <h3><a href="https://arxiv.org/abs/2610.30450">Same Beliefs, Different Policies: Learning Reusable Representations for Early Stopping in LLM Reasoning</a></h3>
+              </div>
+            </article>
+            <article class="publication-entry featured-entry" role="listitem">
+              <div class="publication-index">02</div>
               <div class="publication-body">
                 <div class="publication-tags">
                   <span class="pub-year">2026</span>
@@ -344,7 +350,7 @@
               </div>
             </article>
             <article class="publication-entry" role="listitem">
-              <div class="publication-index">02</div>
+              <div class="publication-index">03</div>
               <div class="publication-body">
                 <div class="publication-tags">
                   <span class="pub-year">2026</span>
@@ -354,7 +360,7 @@
               </div>
             </article>
             <article class="publication-entry" role="listitem">
-              <div class="publication-index">03</div>
+              <div class="publication-index">04</div>
               <div class="publication-body">
                 <div class="publication-tags">
                   <span class="pub-year">2026</span>
@@ -364,7 +370,7 @@
               </div>
             </article>
             <article class="publication-entry" role="listitem">
-              <div class="publication-index">04</div>
+              <div class="publication-index">05</div>
               <div class="publication-body">
                 <div class="publication-tags">
                   <span class="pub-year">2026</span>
@@ -374,7 +380,7 @@
               </div>
             </article>
             <article class="publication-entry" role="listitem">
-              <div class="publication-index">05</div>
+              <div class="publication-index">06</div>
               <div class="publication-body">
                 <div class="publication-tags">
                   <span class="pub-year">2026</span>
@@ -384,7 +390,7 @@
               </div>
             </article>
             <article class="publication-entry" role="listitem">
-              <div class="publication-index">06</div>
+              <div class="publication-index">07</div>
               <div class="publication-body">
                 <div class="publication-tags">
                   <span class="pub-year">2026</span>
@@ -394,7 +400,7 @@
               </div>
             </article>
             <article class="publication-entry" role="listitem">
-              <div class="publication-index">07</div>
+              <div class="publication-index">08</div>
               <div class="publication-body">
                 <div class="publication-tags">
                   <span class="pub-year">2026</span>
@@ -404,7 +410,7 @@
               </div>
             </article>
             <article class="publication-entry" role="listitem">
-              <div class="publication-index">08</div>
+              <div class="publication-index">09</div>
               <div class="publication-body">
                 <div class="publication-tags">
                   <span class="pub-year">2026</span>
@@ -414,7 +420,7 @@
               </div>
             </article>
             <article class="publication-entry" role="listitem">
-              <div class="publication-index">09</div>
+              <div class="publication-index">10</div>
               <div class="publication-body">
                 <div class="publication-tags">
                   <span class="pub-year">2026</span>
@@ -424,7 +430,7 @@
               </div>
             </article>
             <article class="publication-entry" role="listitem">
-              <div class="publication-index">10</div>
+              <div class="publication-index">11</div>
               <div class="publication-body">
                 <div class="publication-tags">
                   <span class="pub-year">2026</span>
@@ -434,7 +440,7 @@
               </div>
             </article>
             <article class="publication-entry" role="listitem">
-              <div class="publication-index">11</div>
+              <div class="publication-index">12</div>
               <div class="publication-body">
                 <div class="publication-tags">
                   <span class="pub-year">2025</span>
@@ -444,7 +450,7 @@
               </div>
             </article>
             <article class="publication-entry" role="listitem">
-              <div class="publication-index">12</div>
+              <div class="publication-index">13</div>
               <div class="publication-body">
                 <div class="publication-tags">
                   <span class="pub-year">2025</span>
@@ -454,7 +460,7 @@
               </div>
             </article>
             <article class="publication-entry" role="listitem">
-              <div class="publication-index">13</div>
+              <div class="publication-index">14</div>
               <div class="publication-body">
                 <div class="publication-tags">
                   <span class="pub-year">2025</span>
@@ -464,7 +470,7 @@
               </div>
             </article>
             <article class="publication-entry" role="listitem">
-              <div class="publication-index">14</div>
+              <div class="publication-index">15</div>
               <div class="publication-body">
                 <div class="publication-tags">
                   <span class="pub-year">2024</span>
@@ -474,7 +480,7 @@
               </div>
             </article>
             <article class="publication-entry" role="listitem">
-              <div class="publication-index">15</div>
+              <div class="publication-index">16</div>
               <div class="publication-body">
                 <div class="publication-tags">
                   <span class="pub-year">2024</span>
@@ -484,7 +490,7 @@
               </div>
             </article>
             <article class="publication-entry" role="listitem">
-              <div class="publication-index">16</div>
+              <div class="publication-index">17</div>
               <div class="publication-body">
                 <div class="publication-tags">
                   <span class="pub-year">2024</span>
@@ -494,7 +500,7 @@
               </div>
             </article>
             <article class="publication-entry" role="listitem">
-              <div class="publication-index">17</div>
+              <div class="publication-index">18</div>
               <div class="publication-body">
                 <div class="publication-tags">
                   <span class="pub-year">2024</span>
@@ -504,7 +510,7 @@
               </div>
             </article>
             <article class="publication-entry" role="listitem">
-              <div class="publication-index">18</div>
+              <div class="publication-index">19</div>
               <div class="publication-body">
                 <div class="publication-tags">
                   <span class="pub-year">2023</span>
@@ -514,7 +520,7 @@
               </div>
             </article>
             <article class="publication-entry" role="listitem">
-              <div class="publication-index">19</div>
+              <div class="publication-index">20</div>
               <div class="publication-body">
                 <div class="publication-tags">
                   <span class="pub-year">2023</span>
@@ -524,7 +530,7 @@
               </div>
             </article>
             <article class="publication-entry" role="listitem">
-              <div class="publication-index">20</div>
+              <div class="publication-index">21</div>
               <div class="publication-body">
                 <div class="publication-tags">
                   <span class="pub-year">2023</span>
@@ -534,7 +540,7 @@
               </div>
             </article>
             <article class="publication-entry" role="listitem">
-              <div class="publication-index">21</div>
+              <div class="publication-index">22</div>
               <div class="publication-body">
                 <div class="publication-tags">
                   <span class="pub-year">2023</span>
@@ -544,7 +550,7 @@
               </div>
             </article>
             <article class="publication-entry" role="listitem">
-              <div class="publication-index">22</div>
+              <div class="publication-index">23</div>
               <div class="publication-body">
                 <div class="publication-tags">
                   <span class="pub-year">2022</span>
@@ -554,7 +560,7 @@
               </div>
             </article>
             <article class="publication-entry" role="listitem">
-              <div class="publication-index">23</div>
+              <div class="publication-index">24</div>
               <div class="publication-body">
                 <div class="publication-tags">
                   <span class="pub-year">2021</span>
@@ -565,7 +571,7 @@
             </article>
           </div>
           <div class="list-more">
-            <button class="button secondary" type="button" id="publication-toggle" aria-controls="full-publication-list" aria-expanded="false" hidden>Show all 23 publications</button>
+            <button class="button secondary" type="button" id="publication-toggle" aria-controls="full-publication-list" aria-expanded="false" hidden>Show all 24 publications</button>
           </div>
         </div>
       </div>

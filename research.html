@@ -45,8 +45,8 @@
           <h2 class="section-title">The fuzzy part is the hardest part.</h2>
         </div>
         <div class="statement-body" data-reveal>
-          <p>People instruct agents and write rubrics in natural language, which leaves a <strong>fuzzy</strong> and unverifiable part whose ground truth is a <strong>distribution</strong> of human judgments rather than a point answer. I believe that getting this part right, so that a model is distributionally aligned with people and knows when it is uncertain, is key to teaching AI taste, preventing reward hacking, and aligning AI beyond the verifiable.</p>
-          <p>My PhD work covers two foundations: <strong>judgment with fuzzy criteria</strong>, evaluating and improving how LLMs handle human disagreement and building human-AI collaborative annotation tools, and <strong>uncertainty quantification</strong> that exposes a model’s confidence about its epistemic states.</p>
+          <p>People instruct agents and write rubrics in natural language, which leaves a <strong>fuzzy</strong> and unverifiable part whose ground truth is a <strong>distribution</strong> of human judgments rather than a point answer. I believe that getting this part right, so that a model matches the distribution of human judgments and knows how well it knows that distribution, is key to teaching AI taste, preventing reward hacking, and aligning AI beyond the verifiable.</p>
+          <p>My PhD work covers two foundations: <strong>judgment with fuzzy criteria</strong>, evaluating and improving how LLMs handle human disagreement and building human-AI collaborative annotation tools, and <strong>uncertainty quantification</strong> that reads a model’s beliefs about its own answers from its hidden states.</p>
         </div>
       </div>
     </section>
@@ -81,10 +81,10 @@
       <div class="container">
         <div class="section-heading" data-reveal>
           <p class="readout">Uncertainty quantification</p>
-          <h2 class="section-title">Exposing a model’s epistemic states.</h2>
+          <h2 class="section-title">Reading a model’s beliefs from its hidden states.</h2>
         </div>
         <div class="statement-body" data-reveal>
-          <p>Honest clarification requires that a model knows where it is unsure. <a href="https://aclanthology.org/2026.acl-long.536/">ReProbe</a> reads a frozen LLM’s internal states to estimate the credibility of each reasoning step, enabling efficient verification and test-time search without a large process reward model. <a href="https://arxiv.org/abs/2610.30450">BELT</a> reads a model’s beliefs about its current and future answer from the same hidden states and fits a small stopping policy on them, so one probe serves different accuracy-cost trade-offs and transfers from math to coding and agentic tasks.</p>
+          <p>The spread of human judgments is irreducible. A model’s uncertainty about that spread is not, and it is what a clarification question can resolve. <a href="https://aclanthology.org/2026.acl-long.536/">ReProbe</a> reads a frozen LLM’s internal states to estimate the credibility of each reasoning step, enabling efficient verification and test-time search without a large process reward model. <a href="https://arxiv.org/abs/2610.30450">BELT</a> reads a model’s beliefs about its current and future answer from the same hidden states and fits a small stopping policy on them, so one probe serves different accuracy-cost trade-offs and transfers from math to coding and agentic tasks.</p>
           <p>Our disagreement work adds a caution: reasoning training degrades a model’s ability to capture how annotators disagree, so calibration has to be measured against distributions explicitly.</p>
           <p><a href="index.html#research">Explore research highlights →</a></p>
         </div>
